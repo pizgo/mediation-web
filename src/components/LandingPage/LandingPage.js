@@ -1,8 +1,14 @@
+import LandingPageHead from "./LandingPageHead";
+import LandingPageOffer from "./LandingPageOffer";
+import LandingPageAboutMe from "./LandingPageAboutMe";
+
 const LandingPage = () => {
 
     return (
         <>
-            <h1>Landing Page</h1>
+            <LandingPageHead/>
+            <LandingPageOffer/>
+            <LandingPageAboutMe/>
         </>
     )
 }
