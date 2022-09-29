@@ -1,4 +1,4 @@
-import { NavLink} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
 
@@ -8,21 +8,21 @@ return (
                <section className="nav">
                    <div className="nav__container">
                        <ul className="nav__elements">
-                           <NavLink className="nav__link" to="/">
+                           <Link className="nav__link" to="/">
                                Start
-                           </NavLink>
-                           <NavLink className="nav__link" to="/aboutme">
+                           </Link>
+                           <Link className="nav__link" to="/omnie">
                                O mnie
-                           </NavLink>
-                           <NavLink className="nav__link" to="/aboutmediation">
+                           </Link>
+                           <Link className="nav__link" to="/omediacjach">
                                O mediacjach
-                           </NavLink>
-                           <NavLink className="nav__link" to="/offer">
+                           </Link>
+                           <Link className="nav__link" to="/oferta">
                                Oferta
-                           </NavLink>
-                           <NavLink className="nav__link" to="/contact">
+                           </Link>
+                           <Link className="nav__link" to="/kontakt">
                                Kontakt
-                           </NavLink>
+                           </Link>
                        </ul>
                    </div>
                </section>
