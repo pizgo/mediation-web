@@ -9,7 +9,7 @@ export default {
             type: 'string',
         },
         {
-            name: 'main',
+            name: 'body',
             type: 'text',
         }
         ]
