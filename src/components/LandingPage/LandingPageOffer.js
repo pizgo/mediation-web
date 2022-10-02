@@ -2,46 +2,53 @@ import { useEffect, useState} from "react";
 import sanityClient from "../../client.js";
 
 const LandingPageOffer = () => {
+    const [landingHeadText, setLandingHeadText] = useState(null);
+    const [landingAboutText, setLandingAboutText] = useState(null);
 
-    // const [headText, setHeadText] = useState(null);
+    useEffect(() => {
+        sanityClient.fetch(
+                `*[_type == "plainText" && title == "LPHead"]{
+            body
+        }`)
+            .then((data) => {
+                setLandingHeadText(data)
+            })
+            .catch(console.error);
+    }, []);
 
-    // MOJE
-    // useEffect(() => {
-    //     sanityClient.fetch(
-    //         // `*[_type == "plainText"] {
-    //         //     body
-    //         // }`)
-    //         `*[_type == "post"]{
-    //             title,
-    //             body
-    //         }`)
-    //         .then((data) => setHeadText(data))
-    //         .catch(console.error);
-    // }, []);
-
-    // SKOPIOWANE Z REP KAPEHE
-    // useEffect(() => {
-    //     sanityClient
-    //         .fetch(
-    //             `*[_type == "post"]{
-    //     title,
-    //     body
-    //   }`
-    //         )
-    //         .then((data) => setHeadText(data))
-    //         .catch(console.error);
-    // }, []);
-
-
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "plainText" && title == "LPAbout"]{
+            body
+        }`)
+            .then((data) => {
+                setLandingAboutText(data)
+            })
+            .catch(console.error);
+    }, []);
 
     return (
-       <>
-        <section>
-            {/*<h4>{headText.title}</h4>*/}
-            {/*<h3>{headText.body}</h3>*/}
-        </section>
-       </>
-    )
+        <>
+            <div>
+                {landingHeadText &&
+                landingHeadText.map((headText, index) => (
+                    <h3>
+                        {headText.body}
+                    </h3>
+                ))}
+            </div>
+            <div>
+                {landingAboutText &&
+                landingAboutText.map((aboutText, index) => (
+                    <h3>
+                        {aboutText.body}
+                    </h3>
+                ))}
+            </div>
+        </>
+    );
+
+
 };
 
 export default LandingPageOffer;

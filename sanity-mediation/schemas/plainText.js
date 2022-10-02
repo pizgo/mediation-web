@@ -4,7 +4,7 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'tytul',
+            name: 'title',
             title: 'tytul',
             type: 'string',
         },
