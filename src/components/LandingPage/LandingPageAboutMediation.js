@@ -1,34 +1,34 @@
 import { useEffect, useState} from "react";
 import sanityClient from "../../client.js";
 
-const LandingPageAboutMe = () => {
-    const [landingAboutText, setLandingAboutText] = useState(null);
+const LandingPageAboutMediation = () => {
+    const [landingHeadText, setLandingHeadText] = useState(null);
+
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "LPAbout"]{
+            `*[_type == "plainText" && title == "LPHead"]{
             body
         }`)
             .then((data) => {
-                setLandingAboutText(data)
+                setLandingHeadText(data)
             })
             .catch(console.error);
     }, []);
 
+
     return (
         <>
             <div>
-                {landingAboutText &&
-                landingAboutText.map((aboutText, index) => (
+                {landingHeadText &&
+                landingHeadText.map((headText, index) => (
                     <h3>
-                        {aboutText.body}
+                        {headText.body}
                     </h3>
                 ))}
             </div>
         </>
     );
-
-
 };
 
-export default LandingPageAboutMe;
+export default LandingPageAboutMediation;
