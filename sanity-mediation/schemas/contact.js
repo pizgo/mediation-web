@@ -4,12 +4,12 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'tytul',
-            title: 'tytul',
+            name: 'title',
+            title: 'title',
             type: 'string',
         },
         {
-            name: 'rodzajKontaktu',
+            name: 'body',
             type: 'string',
         }
     ]

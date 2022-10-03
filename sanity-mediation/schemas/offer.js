@@ -4,12 +4,20 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'tytul',
-            title: 'tytul',
+            name: 'title',
+            title: 'title',
             type: 'string',
         },
         {
-            name: 'tekstKafla',
+            name: 'mainImage',
+            title: 'Main image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'body',
             type: 'text',
         }
     ]
