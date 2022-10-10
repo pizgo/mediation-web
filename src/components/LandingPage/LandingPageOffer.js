@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import sanityClient from "../../client.js";
 
 const LandingPageOffer = () => {
@@ -24,15 +24,14 @@ const LandingPageOffer = () => {
 
     return (
         <>
-            <main>
-                <section>
-                    <h2>
-                        Jak mogę ci pomóc?
-                    </h2>
-                    <div>
-                        {landingOfferText &&
-                        landingOfferText.map((text, index) => (
-                            <article>
+            <div>
+                <h2>
+                    Jak mogę ci pomóc?
+                </h2>
+                <div>
+                    {landingOfferText &&
+                    landingOfferText.map((text, index) => (
+                        <div>
                   <span key={index}>
                       <p>{text.title}</p>
                     <img
@@ -45,12 +44,11 @@ const LandingPageOffer = () => {
                       </p>
                     </span>
                   </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
-                            </article>
-                        ))}
-                    </div>
-                </section>
-            </main>
         </>
     );
 
