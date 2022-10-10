@@ -40,7 +40,7 @@ const LandingPageAboutMe = () => {
                     <div>
                         {landingAboutText &&
                         landingAboutText.map((aboutText, index) => (
-                            <h3>
+                            <h3 key={index}>
                                 {aboutText.body}
                             </h3>
                         ))}
@@ -48,10 +48,9 @@ const LandingPageAboutMe = () => {
                 </div>
                 <div>
                     {landingAboutImg && landingAboutImg.map((img, index) => (
-                        <span key={index}>
-                               <img src={img.picture.asset.url}
+                               <img key={index}
+                                    src={img.picture.asset.url}
                                     alt={img.picture.alt}/>
-                           </span>
                     ))}
                 </div>
             </div>

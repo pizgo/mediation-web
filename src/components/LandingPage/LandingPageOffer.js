@@ -31,20 +31,14 @@ const LandingPageOffer = () => {
                 <div>
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                        <div>
-                  <span key={index}>
-                      <p>{text.title}</p>
-                    <img
-                        src={text.mainImage.asset.url}
-                        alt={text.mainImage.alt}
-                    />
-                    <span>
-                      <p>
-                        {text.body}
-                      </p>
-                    </span>
-                  </span>
-                        </div>
+                        <span key={index}>
+                            <p>{text.title}</p>
+                            <img
+                                src={text.mainImage.asset.url}
+                                alt={text.mainImage.alt}/>
+
+                                <p>{text.body}</p>
+                        </span>
                     ))}
                 </div>
                 <button>Dowiedz się więcej</button>

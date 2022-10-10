@@ -50,30 +50,25 @@ return (
            <div>
                {aboutMeHeader &&
                aboutMeHeader.map((aboutTextHeader, index) => (
-                   <span key={index}>
-                       <h4>
+                       <h4 key={index}>
                            {aboutTextHeader.body}
                        </h4>
-                   </span>
                ))}
            </div>
            <div>
                <div>
                    {aboutMeImg && aboutMeImg.map((img, index) => (
-                       <span key={index}>
-                           <img src={img.picture.asset.url}
+                           <img key={index}
+                                src={img.picture.asset.url}
                                 alt={img.picture.alt}/>
-                       </span>
                    ))}
                </div>
                <div>
                    {aboutMeMainText &&
                    aboutMeMainText.map((aboutTextMain, index) => (
-                       <span key={index}>
-                           <p>
+                           <p key={index}>
                                {aboutTextMain.body}
                            </p>
-                       </span>
                    ))}
                </div>
            </div>

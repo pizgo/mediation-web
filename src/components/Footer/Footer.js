@@ -42,13 +42,13 @@ return (
                 <div>
                     <FaPhoneAlt/>
                     {phoneNumber && phoneNumber.map((number, index) => (
-                        <p>{number.body}</p>
+                        <p key={index}>{number.body}</p>
                     ))}
                 </div>
                 <div>
                     <GrMail/>
                     {email && email.map((address, index) => (
-                        <p>{address.body}</p>
+                        <p key={index}>{address.body}</p>
                     ))}
                 </div>
             </div>
