@@ -4,6 +4,7 @@ import sanityClient from "../../client.js";
 const AboutMe = () => {
     const [aboutMeHeader, setAboutMeHeader] = useState(null);
     const [aboutMeMainText, setAboutMeMainText] = useState(null);
+    const [aboutMeImg, setAboutMeImg] = useState(null)
 
     useEffect(() => {
         sanityClient.fetch(
@@ -27,6 +28,23 @@ const AboutMe = () => {
             .catch(console.error);
     }, []);
 
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "picture" && title == "AboutMeImg"]{
+            picture{
+                asset->{
+                _id,
+                url
+                }},
+                alt
+        }`)
+            .then((data) => {
+                setAboutMeImg(data)
+            })
+            .catch(console.error);
+        console.log(aboutMeImg)
+    }, []);
+
 return (
        <>
            <h2>O mnie</h2>
@@ -41,6 +59,14 @@ return (
                ))}
            </div>
            <div>
+               <div>
+                   {aboutMeImg && aboutMeImg.map((img, index) => (
+                       <span key={index}>
+                           <img src={img.picture.asset.url}
+                                alt={img.picture.alt}/>
+                       </span>
+                   ))}
+               </div>
                <div>
                    {aboutMeMainText &&
                    aboutMeMainText.map((aboutTextMain, index) => (

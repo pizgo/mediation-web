@@ -1,16 +1,16 @@
 export default {
     name: 'picture',
-    title: 'Picture',
+    title: 'picture',
     type: 'document',
     fields: [
         {
-            name: 'aboutMeImgTitle',
-            title: 'Title',
+            name: 'title',
+            title: 'title',
             type: 'string',
         },
         {
-            name: 'aboutMeImg',
-            title: 'About Me Img',
+            name: 'picture',
+            title: 'zdjecie',
             type: 'image',
             options: {
                 hotspot: true,
