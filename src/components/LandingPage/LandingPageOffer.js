@@ -47,6 +47,7 @@ const LandingPageOffer = () => {
                         </div>
                     ))}
                 </div>
+                <button>Dowiedz się więcej</button>
             </div>
 
         </>

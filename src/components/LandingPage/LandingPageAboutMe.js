@@ -17,6 +17,7 @@ const LandingPageAboutMe = () => {
 
     return (
         <>
+            <h2>O mnie</h2>
             <div>
                 {landingAboutText &&
                 landingAboutText.map((aboutText, index) => (
@@ -25,6 +26,7 @@ const LandingPageAboutMe = () => {
                     </h3>
                 ))}
             </div>
+            <button>Dowiedz się więcej</button>
         </>
     );
 
