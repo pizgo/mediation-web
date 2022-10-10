@@ -1,10 +1,15 @@
 import {useState, useEffect} from "react";
+import sanityClient from "../../client.js";
+import { GrMail } from 'react-icons/gr';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
     const [input,setInput] = useState({name: "", email: "", message: ""});
     const [nameError, setNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [success, setSuccess] = useState();
+    const [phoneNumber, setPhoneNumber] = useState(null)
+    const [email, setEmail] = useState(null)
 
     const handleChange = (e) => {
         const { name, value} = e.target;
@@ -25,6 +30,27 @@ const Contact = () => {
         //TODO sending form to the email, setting success to "Wiadomość została wysłana. Wkrórtce się z Tobą skontaktuję"
     }
 
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "contact" && title == "phone number"]{
+            body
+        }`)
+            .then((data) => {
+                setPhoneNumber(data)
+            })
+            .catch(console.error);
+    }, []);
+
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "contact" && title == "email"]{
+            body
+        }`)
+            .then((data) => {
+                setEmail(data)
+            })
+            .catch(console.error);
+    }, []);
 
 
 return (
@@ -63,8 +89,18 @@ return (
                   <div>
                       <h4>Dane kontaktowe</h4>
                       <p>Izabela Starszewska</p>
-                      <p>NUMER TELEFONU Z SANITY</p>
-                      <p>EMAIL Z SANITY</p>
+                      <div>
+                          <FaPhoneAlt/>
+                          {phoneNumber && phoneNumber.map((number, index) => (
+                              <p key={index}>{number.body}</p>
+                          ))}
+                      </div>
+                      <div>
+                          <GrMail/>
+                          {email && email.map((address, index) => (
+                              <p key={index}>{address.body}</p>
+                          ))}
+                      </div>
                   </div>
               </div>
 
