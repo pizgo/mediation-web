@@ -42,7 +42,6 @@ const AboutMe = () => {
                 setAboutMeImg(data)
             })
             .catch(console.error);
-        console.log(aboutMeImg)
     }, []);
 
 return (
