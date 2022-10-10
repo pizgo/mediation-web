@@ -12,6 +12,7 @@ import author from './author'
 import plainText from './plainText'
 import offer from "./offer";
 import contact from "./contact";
+import picture from "./picture";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +29,7 @@ export default createSchema({
     plainText,
     offer,
     contact,
+    picture,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
