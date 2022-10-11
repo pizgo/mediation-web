@@ -66,7 +66,8 @@ return (
                                      type="text"
                                      name="name"
                                      value={input.name}
-                                     placeholder="Twoje imię i nazwisko"/>
+                                     placeholder="Twoje imię i nazwisko"
+                                     required />
                                      <p>{nameError}</p>
                           </div>
                           <div>
@@ -74,14 +75,16 @@ return (
                                      type="email"
                                      name="email"
                                      value={input.email}
-                                     placeholder="Twój adres e-mail"/>
+                                     placeholder="Twój adres e-mail"
+                                     required />
                                      <p>{emailError}</p>
                           </div>
                           <div>
                               <textarea onChange={handleChange}
                                      name="message"
                                      value={input.message}
-                                     placeholder="Miejsce na Twoją wiadomość"/>
+                                     placeholder="Miejsce na Twoją wiadomość"
+                                        required />
                           </div>
                           <button type="submit">Wyślij</button>
                       </form>
