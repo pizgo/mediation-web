@@ -1,7 +1,9 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import sanityClient from "../../client.js";
+import Reaptcha from 'reaptcha';
 import { GrMail } from 'react-icons/gr';
 import { FaPhoneAlt } from 'react-icons/fa';
+import axios from "axios";
 
 const Contact = () => {
     const [input,setInput] = useState({name: "", email: "", message: ""});
@@ -10,6 +12,15 @@ const Contact = () => {
     const [success, setSuccess] = useState();
     const [phoneNumber, setPhoneNumber] = useState(null)
     const [email, setEmail] = useState(null)
+    const captchaRef = useRef(null);
+    const [captchaToken, setCaptchaToken] = useState(null);
+
+    const verify = () =>{
+        captchaRef.current.getResponse().then(res => {
+            setCaptchaToken(res)
+        })
+
+    }
 
     const handleChange = (e) => {
         const { name, value} = e.target;
@@ -18,14 +29,26 @@ const Contact = () => {
             [name]: value
         }));
     }
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
+
+
         e.preventDefault()
-        let isAnyError = false;
-        if(input.name.length === 0) {
-            setNameError('Nie zapomnij o wpisaniu imienia i nazwiska')
-        } else {
-            setNameError()
-        }
+        console.log(captchaRef.current)
+        const token = captchaRef.current.getValue();
+        captchaRef.current.reset();
+
+        await axios.post(process.env.REACT_APP_API_URL, {token})
+            .then(res => console.log(res))
+            .catch((error) => {
+                console.log(error);
+            })
+
+        /* let isAnyError = false;
+         if(input.name.length === 0) {
+             setNameError('Nie zapomnij o wpisaniu imienia i nazwiska')
+         } else {
+             setNameError()
+         }*/
         //TODO error email
         //TODO sending form to the email, setting success to "Wiadomość została wysłana. Wkrórtce się z Tobą skontaktuję"
     }
@@ -86,6 +109,12 @@ return (
                                      placeholder="Miejsce na Twoją wiadomość"
                                         required />
                           </div>
+
+                          <Reaptcha
+                              sitekey={process.env.REACT_APP_SITE_KEY}
+                              ref={captchaRef}
+                              onVerify={verify}
+                          />
                           <button type="submit">Wyślij</button>
                       </form>
                   </div>
