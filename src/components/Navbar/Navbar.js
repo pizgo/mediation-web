@@ -4,25 +4,47 @@ const Navbar = () => {
 
 return (
        <>
-           <nav className="navbar navbar-expand-lg">
-               <div className="container-fluid">
-                   <ul className="nav__elements">
-                       <Link className="nav__link" to="/">
-                           Start
-                       </Link>
-                       <Link className="nav__link" to="/omnie">
-                           O mnie
-                       </Link>
-                       <Link className="nav__link" to="/omediacjach">
-                           O mediacjach
-                       </Link>
-                       <Link className="nav__link" to="/oferta">
-                           Oferta
-                       </Link>
-                       <Link className="nav__link" to="/kontakt">
-                           Kontakt
-                       </Link>
-                   </ul>
+           <nav className="navbar bg-white navbar-expand-lg sticky-top">
+               <div className="container-lg">
+                   <span className="navbar-brand">LOGO</span>
+                   <button className="navbar-toggler"
+                           type="button"
+                           data-bs-toggle="collapse"
+                           data-bs-target="#navbarNav"
+                           aria-controls="navbarNav"
+                           aria-expanded="false"
+                           aria-label="Toggle navigation">
+                       <span className="navbar-toggler-icon"></span>
+                   </button>
+                   <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
+                       <ul className="navbar-nav">
+                           <li className="nav-item active">
+                               <Link className="nav-link" aria-current="page" to="/">
+                                   START
+                               </Link>
+                           </li>
+                           <li className="nav-item">
+                               <Link className="nav-link" to="/omnie">
+                                   O MNIE
+                               </Link>
+                           </li>
+                           <li className="nav-item">
+                               <Link className="nav-link" to="/omediacjach">
+                                   O MEDIACJACH
+                               </Link>
+                           </li>
+                           <li className="nav-item">
+                               <Link className="nav-link" to="/oferta">
+                                   OFERTA
+                               </Link>
+                           </li>
+                           <li className="nav-item">
+                               <Link className="nav-link" to="/kontakt">
+                                   KONTAKT
+                               </Link>
+                           </li>
+                       </ul>
+                   </div>
                </div>
            </nav>
        </>
