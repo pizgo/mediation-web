@@ -1,8 +1,7 @@
 import React from 'react';
-import $ from "jquery";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './scss/index.scss';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 
