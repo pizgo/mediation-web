@@ -1,0 +1,14 @@
+@use "../custom" as *;
+
+.menu {
+
+  li {
+    padding: 0 1.2rem;
+
+    a {
+      color: $black;
+    }
+  }
+
+}
+

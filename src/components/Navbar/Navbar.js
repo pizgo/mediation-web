@@ -5,7 +5,7 @@ const Navbar = () => {
 return (
        <>
            <nav className="navbar bg-white navbar-expand-lg sticky-top">
-               <div className="container-lg">
+               <div className="container-fluid">
                    <span className="navbar-brand">LOGO</span>
                    <button className="navbar-toggler"
                            type="button"
@@ -17,9 +17,9 @@ return (
                        <span className="navbar-toggler-icon"></span>
                    </button>
                    <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
-                       <ul className="navbar-nav">
+                       <ul className="navbar-nav menu">
                            <li className="nav-item active">
-                               <Link className="nav-link" aria-current="page" to="/">
+                               <Link className="nav-link nav-link-color" aria-current="page" to="/">
                                    START
                                </Link>
                            </li>
