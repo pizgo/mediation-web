@@ -1,4 +1,5 @@
-@use "../custom" as *;
+//@use "../custom";
+//@use "../components/mixins as *
 
 .menu {
 
@@ -7,8 +8,15 @@
 
     a {
       color: $black;
+      &:hover {
+        color: $secondary;
+        text-decoration: underline;
+      }
     }
   }
+}
 
+.menu-btn {
+  border: none;
 }
 

@@ -1,20 +1,23 @@
 import { Link} from "react-router-dom";
+import {List} from 'react-bootstrap-icons';
+
 
 const Navbar = () => {
 
 return (
        <>
            <nav className="navbar bg-white navbar-expand-lg sticky-top">
-               <div className="container-fluid">
+               <div className="container-xxl">
                    <span className="navbar-brand">LOGO</span>
-                   <button className="navbar-toggler"
+                   <button className="navbar-toggler menu-btn"
                            type="button"
                            data-bs-toggle="collapse"
                            data-bs-target="#navbarNav"
                            aria-controls="navbarNav"
                            aria-expanded="false"
                            aria-label="Toggle navigation">
-                       <span className="navbar-toggler-icon"></span>
+                       <span className="navbar-toggler-icon toggler-menu"></span>
+                       {/*<List className=""/>*/}
                    </button>
                    <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
                        <ul className="navbar-nav menu">
