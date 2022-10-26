@@ -9,15 +9,16 @@ return (
            <nav className="navbar bg-white navbar-expand-lg sticky-top">
                <div className="container-xxl">
                    <span className="navbar-brand">LOGO</span>
-                   <button className="navbar-toggler"
+                   <button className="navbar-toggler d-flex d-lg-none flex-column justify-content-around"
                            type="button"
                            data-bs-toggle="collapse"
                            data-bs-target="#navbarNav"
                            aria-controls="navbarNav"
                            aria-expanded="false"
                            aria-label="Toggle navigation">
-                       <span className="navbar-toggler-icon"></span>
-                       {/*<List className=""/>*/}
+                       <span className="toggler-icon top-bar"></span>
+                       <span className="toggler-icon middle-bar"></span>
+                       <span className="toggler-icon bottom-bar"></span>
                    </button>
                    <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
                        <ul className="navbar-nav menu">
