@@ -9,7 +9,7 @@ return (
            <nav className="navbar bg-white navbar-expand-lg sticky-top">
                <div className="container-xxl">
                    <span className="navbar-brand">LOGO</span>
-                   <button className="navbar-toggler d-flex d-lg-none flex-column justify-content-around"
+                   <button className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
                            type="button"
                            data-bs-toggle="collapse"
                            data-bs-target="#navbarNav"

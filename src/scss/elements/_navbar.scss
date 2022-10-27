@@ -20,7 +20,7 @@
   border: none;
   color: transparent;
   width: 20px;
-  height: 20px;
+  height: 15px;
   position: relative;
   transition: .5s ease-in-out;
 
@@ -42,18 +42,51 @@
 .toggler-icon {
   display: block;
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 100%;
   background: $black;
   border-radius: 1px;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: .15s ease-in-out;
 }
 
 .middle-bar {
   margin-top: 0px;
+}
 
+//when navigation clicked
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  display: none;
+  //opacity: 0;
+  //filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+//when navigation is collapsed
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  display: block;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
 }
 
