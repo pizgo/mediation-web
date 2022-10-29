@@ -1,0 +1,14 @@
+.display-4 {
+  margin: 5rem 0;
+
+  &-intro {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+}
