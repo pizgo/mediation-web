@@ -6,7 +6,7 @@ const Navbar = () => {
 
 return (
        <>
-           <nav className="navbar bg-white navbar-expand-lg sticky-top">
+           <nav className="navbar bg-white navbar-expand-lg">
                <div className="container-xxl">
                    <span className="navbar-brand">LOGO</span>
                    <button className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
