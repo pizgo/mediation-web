@@ -12,7 +12,7 @@ function App() {
   return (
       <>
           <Navbar/>
-          <div className="container-xxl">
+          <div className="container-fluid">
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/omnie" element={<AboutMe/>}/>

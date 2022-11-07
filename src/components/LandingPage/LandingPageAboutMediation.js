@@ -18,16 +18,16 @@ const LandingPageAboutMediation = () => {
 
 
     return (
-        <>
-            <div>
+        <section className="introText-section">
+            <div className="container-fluid introText-container">
                 {landingHeadText &&
                 landingHeadText.map((headText, index) => (
-                    <h3 key={index}>
+                    <p className="text" key={index}>
                         {headText.body}
-                    </h3>
+                    </p>
                 ))}
             </div>
-        </>
+        </section>
     );
 };
 
