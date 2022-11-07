@@ -11,17 +11,11 @@ return (
                                  className="img-fluid img-intro "/>
                         </div>
                    </div>
-                   <div className="col-md-6">
-                       {/*<h2 className="display-4">*/}
-                       {/*    <span className="display-4-intro">Izabela Starszewska</span>*/}
-                       {/*    <span className="display-4-desc">Mediacje</span>*/}
-                       {/*    <span className="display-4-desc">Negocjacje</span>*/}
-                       {/*    <span className="display-4-desc">Rozwiązywanie sporów</span>*/}
-                       {/*</h2>*/}
-                       <h1 className="display-3 intro-name">Izabela Starszewska</h1>
-                       <h1 className="intro-desc">Mediacje</h1>
-                       <h1 className="intro-desc">Negocjacje</h1>
-                       <h1 className="intro-desc">Rozwiązywanie sporów</h1>
+                   <div className="col-md-6 d-flex flex-column justify-content-center">
+                       <h1 className="display-4 intro-name">Izabela Starszewska</h1>
+                       <h2 className="intro-desc">Mediacje</h2>
+                       <h2 className="intro-desc">Negocjacje</h2>
+                       <h2 className="intro-desc">Rozwiązywanie sporów</h2>
                    </div>
                </div>
            </div>

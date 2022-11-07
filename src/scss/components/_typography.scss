@@ -1,19 +1,10 @@
-//.display-4 {
-//  margin: 5rem 0;
-//
-//  &-intro {
-//    display: inline-block;
-//    font-weight: bold;
-//  }
-//
-//  &-desc {
-//    display: block;
-//    font-weight: normal;
-//    font-size: 1rem;
-//
-//    //@include media-breakpoint-up(lg) {
-//      //font-size: 1.5 rem;
-// }
-//}
+.intro-name {
+  font-weight: bold;
+}
+.intro-desc {
+  padding: 1rem 0;
+}
+
+
 
 
