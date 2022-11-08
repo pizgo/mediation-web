@@ -7,7 +7,7 @@ const Navbar = () => {
 return (
        <>
            <nav className="navbar bg-white navbar-expand-lg">
-               <div className="container-xxl">
+               <div className="container-xxl py-sm-5">
                    <span className="navbar-brand">LOGO</span>
                    <button className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
                            type="button"

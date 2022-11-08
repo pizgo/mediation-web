@@ -28,10 +28,10 @@ const LandingPageOffer = () => {
                 <div className="row text-center my-5">
                      <h2 className="fw-bold my-3">Jak mogę ci pomóc?</h2>
                 </div>
-                <div className="row pt-5">
+                <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                        <div className="col-xxl-4 col-lg-6 px-5 my-3">
+                        <div className="col-xxl-4 col-lg-6 my-3 col-offer">
                             <div className="card shadow px-3 pt-4 position-relative">
                                 <span key={index}>
                                     <div className="img-background position-absolute top-0 start-50 translate-middle "></div>
@@ -42,13 +42,12 @@ const LandingPageOffer = () => {
                                         alt={text.mainImage.alt}/>
                                     <p className="card-title text-center fw-bold pt-5">{text.title}</p>
                                     <p className="card-body">{text.body}</p>
-
                                 </span>
                             </div>
                         </div>
                     ))}
                 </div>
-                <button className="btn button btn-secondary my-5">Dowiedz się więcej</button>
+                {/*<button className="btn button btn-secondary my-5">Dowiedz się więcej</button>*/}
             </div>
 
         </section>
