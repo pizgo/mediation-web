@@ -1,3 +1,4 @@
+//FIRST SECTION ON LANDING PAGE
 .intro-name {
   font-weight: bold;
 }
@@ -5,8 +6,8 @@
   padding: 1rem 0;
 }
 
+//INTRO TEXT
 .text {
-  text-align: center;
   font-style: italic;
   color: white;
   padding: 3% 10%;
@@ -15,9 +16,8 @@
     font-size: 1.2rem;
   }
   @include media-breakpoint-up(xxl) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-
 }
 
 

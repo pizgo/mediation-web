@@ -22,7 +22,7 @@ const LandingPageAboutMediation = () => {
             <div className="container-fluid introText-container">
                 {landingHeadText &&
                 landingHeadText.map((headText, index) => (
-                    <p className="text" key={index}>
+                    <p className="text text-center" key={index}>
                         {headText.body}
                     </p>
                 ))}
