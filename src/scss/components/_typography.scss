@@ -23,6 +23,11 @@
 //LANDING PAGE OFFER
 .card-body {
   text-align: justify;
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 1rem;
+  }
 }
 
 

@@ -48,7 +48,7 @@ const LandingPageAboutMe = () => {
                 </div>
                 <div>
                     {landingAboutImg && landingAboutImg.map((img, index) => (
-                               <img key={index}
+                               <img className="img-fluid "key={index}
                                     src={img.picture.asset.url}
                                     alt={img.picture.alt}/>
                     ))}

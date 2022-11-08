@@ -1,0 +1,25 @@
+.img-offer {
+  width: 45px;
+  height: 45px;
+
+  @include media-breakpoint-up(xxl) {
+    width: 58px;
+    height: 58px;
+  }
+
+
+}
+
+.img-background {
+  background-color: $primary;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+
+  @include media-breakpoint-up(xxl) {
+    height: 92px;
+    width: 92px;
+  }
+
+
+}
