@@ -10,7 +10,7 @@
 .text {
   font-style: italic;
   color: white;
-  padding: 3% 10%;
+  padding: 5% 12%;
 
   @include media-breakpoint-up(lg) {
     font-size: 1.2rem;
@@ -18,6 +18,11 @@
   @include media-breakpoint-up(xxl) {
     font-size: 1.3rem;
   }
+}
+
+//LANDING PAGE OFFER
+.card-body {
+  text-align: justify;
 }
 
 

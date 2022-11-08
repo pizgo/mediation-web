@@ -28,11 +28,11 @@ const LandingPageOffer = () => {
                 <div className="row text-center my-5">
                      <h2 className="fw-bold my-3">Jak mogę ci pomóc?</h2>
                 </div>
-                <div className="row">
+                <div className="row pt-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                        <div className="col-lg-4">
-                            <div className="card">
+                        <div className="col-lg-4 px-5">
+                            <div className="card shadow px-3 pt-4">
                                 <span key={index}>
                                     <p className="card-title text-center fw-bold pt-5">{text.title}</p>
                                     {/*<img*/}
@@ -44,7 +44,7 @@ const LandingPageOffer = () => {
                         </div>
                     ))}
                 </div>
-                <button>Dowiedz się więcej</button>
+                <button className="btn button btn-secondary my-5">Dowiedz się więcej</button>
             </div>
 
         </section>
