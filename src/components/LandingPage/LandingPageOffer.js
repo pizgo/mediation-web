@@ -1,9 +1,20 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef } from "react";
 import sanityClient from "../../client.js";
 import {Link} from "react-router-dom";
 
 const LandingPageOffer = () => {
     const [landingOfferText, setLandingOfferText] = useState(null);
+
+    const [myElementIsVisible, setMyElementIsVisible] = useState();
+    console.log('myElementisVisible', myElementIsVisible)
+    const myRef = useRef();
+    useEffect( () => {
+        const observer = new IntersectionObserver((entries) => {
+                const entry = entries[0];
+                setMyElementIsVisible(entry.isIntersecting)
+            })
+        observer.observe(myRef.current);
+    }, [])
 
     useEffect(() => {
         sanityClient.fetch(
@@ -29,7 +40,7 @@ const LandingPageOffer = () => {
                 <div className="row text-center my-5">
                      <h2 className="fw-bold my-3">Jak mogę ci pomóc?</h2>
                 </div>
-                <div className="row pt-lg-5 mb-5">
+                <div ref={myRef} className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
                             <div className="col-lg-4 col-md-6 my-3 col-offer">
