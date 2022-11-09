@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import sanityClient from "../../client.js";
+import {Link} from "react-router-dom";
 
 const LandingPageOffer = () => {
     const [landingOfferText, setLandingOfferText] = useState(null);
@@ -31,20 +32,22 @@ const LandingPageOffer = () => {
                 <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                        <div className="col-lg-4 col-md-6 my-3 col-offer">
-                            <div className="card shadow px-3 pt-4 mb-4 mb-md-5 position-relative">
-                                <span key={index}>
-                                    <div className="img-background position-absolute top-0 start-50 translate-middle "></div>
-                                    <img
-                                        className="img-offer img-fluid
-                                        position-absolute top-0 start-50 translate-middle"
-                                        src={text.mainImage.asset.url}
-                                        alt={text.mainImage.alt}/>
-                                    <p className="card-title text-center fw-bold pt-4 pt-lg-5">{text.title}</p>
-                                    <p className="card-body">{text.body}</p>
-                                </span>
+                            <div className="col-lg-4 col-md-6 my-3 col-offer">
+                                <Link className="offer-link link-dark" to="/oferta">
+                                    <div className="card offer-card px-3 pt-4 mb-4 mb-md-5 position-relative">
+                                        <span key={index}>
+                                            <div className="img-background position-absolute top-0 start-50 translate-middle "></div>
+                                            <img
+                                                className="img-offer img-fluid
+                                                position-absolute top-0 start-50 translate-middle"
+                                                src={text.mainImage.asset.url}
+                                                alt={text.mainImage.alt}/>
+                                            <p className="card-title text-center fw-bold pt-4 pt-lg-5">{text.title}</p>
+                                            <p className="card-body">{text.body}</p>
+                                        </span>
+                                    </div>
+                                </Link>
                             </div>
-                        </div>
                     ))}
                 </div>
                 {/*<button className="btn button btn-secondary my-5">Dowiedz się więcej</button>*/}
