@@ -31,8 +31,8 @@ const LandingPageOffer = () => {
                 <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                        <div className="col-xxl-4 col-lg-6 my-3 col-offer">
-                            <div className="card shadow px-3 pt-4 mb-4 position-relative">
+                        <div className="col-lg-4 col-md-6 my-3 col-offer">
+                            <div className="card shadow px-3 pt-4 mb-4 mb-md-5 position-relative">
                                 <span key={index}>
                                     <div className="img-background position-absolute top-0 start-50 translate-middle "></div>
                                     <img
