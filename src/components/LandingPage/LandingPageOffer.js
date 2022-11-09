@@ -54,7 +54,7 @@ const LandingPageOffer = () => {
                                                 src={text.mainImage.asset.url}
                                                 alt={text.mainImage.alt}/>
                                             <p className="card-title text-center fw-bold pt-4 pt-lg-5">{text.title}</p>
-                                            <p className="card-body">{text.body}</p>
+                                            <p className="card-body basic-text">{text.body}</p>
                                         </span>
                                     </div>
                                 </Link>
