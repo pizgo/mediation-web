@@ -35,22 +35,24 @@ return (
     <section className="footer">
         <div className="container">
             <div className="row d-flex justify-content-between pt-3">
-                <div className="col-sm-6 col-lg-3">
-                    <p>POLITYKA PRYWATNOŚCI</p>
-                    <p>2022 © Izabela Starszewska</p>
+                <div className="col">
+                    <p className="footer-text">POLITYKA PRYWATNOŚCI</p>
+                    <p className="footer-text">2022 © Izabela Starszewska</p>
                 </div>
-                <div className="col-sm-6 col-lg-3">
-                    <div>
-                        <FaPhoneAlt className="d-inline"/>
-                        {phoneNumber && phoneNumber.map((number, index) => (
-                            <p className="d-inline mx-2" key={index}>{number.body}</p>
-                        ))}
-                    </div>
-                    <div>
-                        <GrMail className="d-inline"/>
-                        {email && email.map((address, index) => (
-                            <p className="d-inline mx-2" key={index}>{address.body}</p>
-                        ))}
+                <div className="col d-flex flex-column align-items-end ">
+                    <div className="">
+                        <div className="mb-2">
+                            <FaPhoneAlt className="d-inline"/>
+                            {phoneNumber && phoneNumber.map((number, index) => (
+                                <p className="d-inline footer-text mx-2" key={index}>{number.body}</p>
+                            ))}
+                        </div>
+                        <div>
+                            <GrMail className="d-inline"/>
+                            {email && email.map((address, index) => (
+                                <p className="d-inline footer-text mx-2" key={index}>{address.body}</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
