@@ -7,5 +7,9 @@ $lightgrey: #F8F9FA;
 $primary: $lightgold;
 $secondary: $green;
 
+$thumbnail-padding: 0.5rem;
+$thumbnail-border-radius: 0;
+
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

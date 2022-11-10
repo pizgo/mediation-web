@@ -1,9 +1,9 @@
-//FIRST SECTION ON LANDING PAGE
+//LANDING PAGE INTRO SECTION
 .intro-name {
-  font-weight: bold;
+  //font-weight: bold;
 }
 .intro-desc {
-  padding: 1rem 0;
+  //padding: 1rem 0;
 }
 
 //INTRO TEXT
@@ -33,6 +33,10 @@
 //FOOTER
 .footer-text {
   font-size: 0.6rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 0.7rem;
+  }
 }
 
 
