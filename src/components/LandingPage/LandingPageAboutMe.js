@@ -36,7 +36,7 @@ const LandingPageAboutMe = () => {
     return (
         <section className="landing-aboutMe">
             <div className="container">
-                <div className="row d-flex landing-aboutMe-row justify-content-center">
+                <div className="row landing-aboutMe-row">
                     <div className="col-md-6">
                         <h2 className="fw-bold">O mnie</h2>
                         <div>

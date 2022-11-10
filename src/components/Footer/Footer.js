@@ -32,28 +32,32 @@ const Footer = () => {
     }, []);
 
 return (
-    <>
-        <div className='container'>
-            <div>
-                <p>POLITYKA PRYWATNOŚCI</p>
-                <p>2022 © Izabela Starszewska</p>
-            </div>
-            <div>
-                <div>
-                    <FaPhoneAlt/>
+    <section className="footer">
+        <div className="container">
+            <div className="row d-flex justify-content-between pt-3">
+                <div className="col-3">
+                    <p>POLITYKA PRYWATNOŚCI</p>
+                </div>
+                <div className="col-3">
+                    <FaPhoneAlt className="d-inline"/>
                     {phoneNumber && phoneNumber.map((number, index) => (
-                        <p key={index}>{number.body}</p>
+                        <p className="d-inline mx-2" key={index}>{number.body}</p>
                     ))}
                 </div>
-                <div>
-                    <GrMail/>
+            </div>
+            <div className="row d-flex justify-content-between">
+                <div className="col-3">
+                    <p>2022 © Izabela Starszewska</p>
+                </div>
+                <div className="col-3">
+                    <GrMail className="d-inline"/>
                     {email && email.map((address, index) => (
-                        <p key={index}>{address.body}</p>
+                        <p className="d-inline mx-2" key={index}>{address.body}</p>
                     ))}
                 </div>
             </div>
         </div>
-    </>
+    </section>
     )
 };
 
