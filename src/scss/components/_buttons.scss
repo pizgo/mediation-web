@@ -1,3 +1,43 @@
 //.button {
 //  margin: 100px !important;
 //}
+
+.button {
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  transition: .5s all ease-in-out;
+  background: transparent;
+  border: none;
+
+  &:before {
+    content: '';
+    border-top: .1rem solid $black;
+    border-bottom: .1rem solid $black;
+    display: block;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 100%;
+    transition: .48s all ease-in-out;
+  }
+
+  &:hover {
+    letter-spacing: .1rem;
+    color: $secondary;
+  }
+
+  &:hover:before {
+    left: 0;
+    right: 0;
+    border-top: .1rem solid $secondary;
+    border-bottom: .1rem solid $secondary;
+  }
+}

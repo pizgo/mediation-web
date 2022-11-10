@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import sanityClient from "../../client.js";
+import {Link} from "react-router-dom";
 
 const LandingPageAboutMe = () => {
     const [landingAboutText, setLandingAboutText] = useState(null);
@@ -35,22 +36,24 @@ const LandingPageAboutMe = () => {
     return (
         <section className="landing-aboutMe">
             <div className="container">
-                <div className="row mt-5">
+                <div className="row d-flex landing-aboutMe-row justify-content-center">
                     <div className="col-md-6">
                         <h2 className="fw-bold">O mnie</h2>
                         <div>
                             {landingAboutText &&
                             landingAboutText.map((aboutText, index) => (
-                                <p className="basic-text" key={index}>
+                                <p className="basic-text mt-5" key={index}>
                                     {aboutText.body}
                                 </p>
                             ))}
                         </div>
-                        <button>Dowiedz się więcej</button>
+                        <Link className="offer-link link-dark" to="/oferta">
+                            <button className="button mt-5">Dowiedz się więcej</button>
+                        </Link>
                     </div>
                     <div className="col-md-6">
                         {landingAboutImg && landingAboutImg.map((img, index) => (
-                                   <img className="img-fluid pl-5" key={index}
+                                   <img className="img-fluid rounded float-end" key={index}
                                         src={img.picture.asset.url}
                                         alt={img.picture.alt}/>
                         ))}
