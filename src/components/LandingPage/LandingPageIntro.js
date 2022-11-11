@@ -22,13 +22,13 @@ return (
                {/*    </div>*/}
                {/*</div>*/}
                <div className="row">
-                   <div className="col-md-6">
-                       <div className="intro-img-container d-flex justify-content-center">
-                           <img src={photoBig} alt='zdjecie'
-                                className="img-fluid img-intro "/>
-                       </div>
-                   </div>
-                   <div className="col-md-6 d-flex flex-column justify-content-center">
+                   {/*<div className="col-md-8">*/}
+                   {/*    <div className="intro-img-container d-flex justify-content-center">*/}
+                   {/*        <img src={photoBig} alt='zdjecie'*/}
+                   {/*             className="img-fluid img-intro "/>*/}
+                   {/*    </div>*/}
+                   {/*</div>*/}
+                   <div className="col-md-4 d-flex flex-column justify-content-center">
                        <h1 className="display-4 intro-name">Izabela Starszewska</h1>
                        <h2 className="intro-desc">Mediacje</h2>
                        <h2 className="intro-desc">Negocjacje</h2>
