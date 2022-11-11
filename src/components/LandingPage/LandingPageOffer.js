@@ -58,16 +58,12 @@ const LandingPageOffer = () => {
                                         </span>
                                     </div>
                                 </Link>
-                            </div>
-                    ))}
+                            </div>))}
                 </div>
-                {/*<button className="btn button btn-secondary my-5">Dowiedz się więcej</button>*/}
             </div>
 
         </section>
     );
-
-
 };
 
 export default LandingPageOffer;

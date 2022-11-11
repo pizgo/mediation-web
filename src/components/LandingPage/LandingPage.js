@@ -1,4 +1,4 @@
-import LandingPageIntro from "./LandingPageIntro";
+import LandingPageHead from "./LandingPageHead";
 import LandingPageAboutMediation from "./LandingPageAboutMediation";
 import LandingPageOffer from "./LandingPageOffer";
 import LandingPageAboutMe from "./LandingPageAboutMe";
@@ -8,7 +8,7 @@ const LandingPage = () => {
 
     return (
         <>
-            <LandingPageIntro/>
+            <LandingPageHead/>
             <LandingPageAboutMediation/>
             <LandingPageOffer/>
             <LandingPageAboutMe/>

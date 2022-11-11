@@ -37,7 +37,7 @@ return (
             <div className="row d-flex justify-content-between pt-3">
                 <div className="col">
                     <p className="footer-text">POLITYKA PRYWATNOŚCI</p>
-                    <p className="footer-text">2022 © Izabela Starszewska</p>
+                    <p className="footer-text">2022 © Izabela Kowalska</p>
                 </div>
                 <div className="col d-flex flex-column align-items-end ">
                     <div className="">
