@@ -1,9 +1,18 @@
 //LANDING PAGE INTRO SECTION
 .intro-name {
-  //font-weight: bold;
+  font-weight: 400;
 }
 .intro-desc {
-  //padding: 1rem 0;
+  padding-bottom: 0.1rem;
+
+  &:last-of-type {
+    padding-bottom: 1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 0.7rem;
+  }
+
 }
 
 //INTRO TEXT
