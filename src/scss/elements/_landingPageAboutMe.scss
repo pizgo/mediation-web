@@ -1,7 +1,24 @@
 .landing-aboutMe {
   background-color: $lightgrey;
+
+  &-row {
+    padding: 6% 0;
+  }
+
+  &-img {
+    width: 70%;
+  }
+
+  &-textContainer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
-.landing-aboutMe-row {
-  padding: 6% 0;
-}
+
+

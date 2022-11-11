@@ -1,9 +1,5 @@
-//.button {
-//  margin: 100px !important;
-//}
-
 .button {
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   font-weight: bold;
   text-align: center;
   display: inline-block;
@@ -14,6 +10,12 @@
   transition: .5s all ease-in-out;
   background: transparent;
   border: none;
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
 
   &:before {
     content: '';

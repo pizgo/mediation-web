@@ -43,7 +43,7 @@ const LandingPageOffer = () => {
                 <div ref={myRef} className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
-                            <div className="col-lg-4 col-md-6 my-3 col-offer">
+                            <div className="col-xxl-4 col-md-6 my-3 col-offer">
                                 <Link className="offer-link link-dark" to="/oferta">
                                     <div className="card offer-card px-3 pt-4 mb-4 mb-md-5 position-relative">
                                         <span key={index}>
