@@ -1,12 +1,10 @@
 .intro-section {
-  background-image: url("../../assets/photoBig.png");
-  background-position: left;
-  height: 70vh;
+  //background-image: url("../../assets/photoBig.png");
+  //background-position: left;
+
 }
 
-//.img-intro {
-//  @include media-breakpoint-up(md) {
-//    width: 150%;
-//  }
-//}
+.img-intro {
+  max-width: 60%;
+}
 
