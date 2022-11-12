@@ -36,7 +36,7 @@ const LandingPageOffer = () => {
             animation.start({
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 2
+                    type: 'spring', duration: 1.5, ease: 'linear'
                 }
             })
         }
