@@ -7,8 +7,16 @@ import Offer from "./components/Offer/Offer";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
+import Aos from 'aos';
 
 function App() {
+    Aos.init({
+        duration: 1500,
+        debounceDelay: 300,
+        once: true,
+        delay: 50,
+        offset: 200,
+    });
   return (
       <>
           <Navbar/>

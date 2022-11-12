@@ -50,7 +50,6 @@ const LandingPageAboutMe = () => {
                                 <button className="button landing-aboutMe-btn mb-3 mb-md-0 mt-md-3">Dowiedz się więcej</button>
                             </Link>
                         </div>
-
                     </div>
                     <div className="col-md-6">
                         {landingAboutImg && landingAboutImg.map((img, index) => (

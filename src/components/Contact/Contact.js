@@ -55,57 +55,60 @@ const Contact = () => {
 
 return (
           <section className='contact'>
-              <h2>Kontakt</h2>
-              <div>
-                  <div>
-                    <h4>Masz pytanie? Wypełnij formularz</h4>
-                      <form onSubmit={handleSubmit}>
-                          <div>
-                              <input onChange={handleChange}
-                                     type="text"
-                                     name="name"
-                                     value={input.name}
-                                     placeholder="Twoje imię i nazwisko"
-                                     required />
-                                     <p>{nameError}</p>
-                          </div>
-                          <div>
-                              <input onChange={handleChange}
-                                     type="email"
-                                     name="email"
-                                     value={input.email}
-                                     placeholder="Twój adres e-mail"
-                                     required />
-                                     <p>{emailError}</p>
-                          </div>
-                          <div>
-                              <textarea onChange={handleChange}
-                                     name="message"
-                                     value={input.message}
-                                     placeholder="Miejsce na Twoją wiadomość"
-                                        required />
-                          </div>
-                          <button type="submit">Wyślij</button>
-                      </form>
+              <div className='container'>
+                  <div className='row text-center my-5'>
+                      <h2 className="fw-bold my-3">Kontakt</h2>
                   </div>
-                  <div>
-                      <h4>Dane kontaktowe</h4>
-                      <p>Izabela Kowalska</p>
-                      <div>
-                          <FaPhoneAlt/>
-                          {phoneNumber && phoneNumber.map((number, index) => (
-                              <p key={index}>{number.body}</p>
-                          ))}
+                  <div className='row contact-row'>
+                      <div className='col'>
+                        <h4>Masz pytanie? Wypełnij formularz</h4>
+                          <form onSubmit={handleSubmit}>
+                              <div>
+                                  <input onChange={handleChange}
+                                         type="text"
+                                         name="name"
+                                         value={input.name}
+                                         placeholder="Twoje imię i nazwisko"
+                                         required />
+                                         <p>{nameError}</p>
+                              </div>
+                              <div>
+                                  <input onChange={handleChange}
+                                         type="email"
+                                         name="email"
+                                         value={input.email}
+                                         placeholder="Twój adres e-mail"
+                                         required />
+                                         <p>{emailError}</p>
+                              </div>
+                              <div>
+                                  <textarea onChange={handleChange}
+                                         name="message"
+                                         value={input.message}
+                                         placeholder="Miejsce na Twoją wiadomość"
+                                            required />
+                              </div>
+                              <button type="submit">Wyślij</button>
+                          </form>
                       </div>
-                      <div>
-                          <GrMail/>
-                          {email && email.map((address, index) => (
-                              <p key={index}>{address.body}</p>
-                          ))}
+                      <div className='col'>
+                          <h4>Dane kontaktowe</h4>
+                          <p>Izabela Kowalska</p>
+                          <div>
+                              <FaPhoneAlt/>
+                              {phoneNumber && phoneNumber.map((number, index) => (
+                                  <p key={index}>{number.body}</p>
+                              ))}
+                          </div>
+                          <div>
+                              <GrMail/>
+                              {email && email.map((address, index) => (
+                                  <p key={index}>{address.body}</p>
+                              ))}
+                          </div>
                       </div>
                   </div>
               </div>
-
           </section>
     )
 };
