@@ -8,7 +8,7 @@ const LandingPageAboutMe = () => {
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "LPAbout"]{
+            `*[_type == "plainText" && title == "O mnie na stronie glownej"]{
             body
         }`)
             .then((data) => {

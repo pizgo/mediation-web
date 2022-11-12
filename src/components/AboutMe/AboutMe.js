@@ -8,7 +8,7 @@ const AboutMe = () => {
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "AboutPageHeader"]{
+            `*[_type == "plainText" && title == "Wstep na stronie o mnie"]{
             body
         }`)
             .then((data) => {
@@ -19,7 +19,7 @@ const AboutMe = () => {
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "AboutPageMainText"]{
+            `*[_type == "plainText" && title == "O mnie glowne"]{
             body
         }`)
             .then((data) => {

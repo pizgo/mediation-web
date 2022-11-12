@@ -7,7 +7,7 @@ const LandingPageAboutMediation = () => {
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "LPHead"]{
+            `*[_type == "plainText" && title == "Wstep na stronie glownej"]{
             body
         }`)
             .then((data) => {
