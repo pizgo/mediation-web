@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mediation-web/static/css/main.f06de981.css",
+    "main.js": "/mediation-web/static/js/main.8288dddb.js",
+    "static/media/photoBig.png": "/mediation-web/static/media/photoBig.5d8a7ae325f605fa89a6.png",
+    "index.html": "/mediation-web/index.html",
+    "main.f06de981.css.map": "/mediation-web/static/css/main.f06de981.css.map",
+    "main.8288dddb.js.map": "/mediation-web/static/js/main.8288dddb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f06de981.css",
+    "static/js/main.8288dddb.js"
+  ]
+}
