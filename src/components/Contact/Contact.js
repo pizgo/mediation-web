@@ -54,8 +54,7 @@ const Contact = () => {
 
 
 return (
-       <div>
-          <section>
+          <section className='contact'>
               <h2>Kontakt</h2>
               <div>
                   <div>
@@ -91,7 +90,7 @@ return (
                   </div>
                   <div>
                       <h4>Dane kontaktowe</h4>
-                      <p>Izabela Starszewska</p>
+                      <p>Izabela Kowalska</p>
                       <div>
                           <FaPhoneAlt/>
                           {phoneNumber && phoneNumber.map((number, index) => (
@@ -108,7 +107,6 @@ return (
               </div>
 
           </section>
-       </div>
     )
 };
 

@@ -5,7 +5,6 @@ import {motion} from 'framer-motion';
 import {useAnimation} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 
-
 const LandingPageOffer = () => {
     const [landingOfferText, setLandingOfferText] = useState(null);
 
@@ -27,24 +26,21 @@ const LandingPageOffer = () => {
             .catch(console.error);
     }, []);
 
-    //scrolling-triggered animation
+    //scroll-triggered animation
     const {ref, inView} = useInView();
-    const animation = useAnimation();
+    const offerCardsAnimation = useAnimation();
 
     useEffect(() => {
-        if(inView) {
-            animation.start({
-                y: 0,
-                transition: {
-                    type: 'spring', duration: 1.5, ease: 'linear'
-                }
-            })
-        }
-        if(!inView) {
-            animation.start({
-                y: '+100vh'
-            })
-        }
+        const animationEnd = {
+            y: 0,
+            transition: {
+                type: 'spring', duration: 2, ease: 'linear'
+            }
+        };
+        const animationStart = {
+            y: '+100vh'
+        };
+        offerCardsAnimation.start(inView ? animationEnd : animationStart)
     }, [inView])
 
     return (
@@ -54,7 +50,7 @@ const LandingPageOffer = () => {
                      <h2 className="fw-bold my-3">Jak mogę ci pomóc?</h2>
                 </div>
                 <div ref={ref}>
-                    <motion.div animate={animation}>
+                    <motion.div animate={offerCardsAnimation}>
                     <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
