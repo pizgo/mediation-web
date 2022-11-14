@@ -22,7 +22,7 @@ function App() {
           <Navbar/>
           <div className="container-fluid">
             <Routes>
-                <Route path="/" element={<LandingPage/>}/>
+                <Route path="/mediation-web" element={<LandingPage/>}/>
                 <Route path="/omnie" element={<AboutMe/>}/>
                 <Route path="/omediacjach" element={<AboutMediation/>}/>
                 <Route path="/oferta" element={<Offer/>}/>

@@ -21,7 +21,7 @@ return (
                    <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
                        <ul className="navbar-nav menu">
                            <li className="nav-item active">
-                               <Link className="nav-link nav-link-color" aria-current="page" to="/">
+                               <Link className="nav-link nav-link-color" aria-current="page" to="/mediation-web">
                                    START
                                </Link>
                            </li>
