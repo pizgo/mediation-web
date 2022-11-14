@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import sanityClient from "../../client.js";
 import { GrMail } from 'react-icons/gr';
 import { FaPhoneAlt } from 'react-icons/fa';
+import {motion} from "framer-motion";
 
 const Contact = () => {
     const [input,setInput] = useState({name: "", email: "", message: ""});
@@ -54,13 +55,17 @@ const Contact = () => {
 
 
 return (
+          <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ease: "easeOut", duration: 1}}>
           <section className='contact'>
               <div className='container'>
                   <div className='row text-center my-5'>
                       <h2 className="fw-bold my-3">Kontakt</h2>
                   </div>
                   <div className='row contact-row'>
-                      <div className='col'>
+                      <div className='col-lg-8'>
                         <h4>Masz pytanie? Wypełnij formularz</h4>
                           <form onSubmit={handleSubmit}>
                               <div>
@@ -88,10 +93,10 @@ return (
                                          placeholder="Miejsce na Twoją wiadomość"
                                             required />
                               </div>
-                              <button type="submit">Wyślij</button>
+                              <button className="button" type="submit">Wyślij</button>
                           </form>
                       </div>
-                      <div className='col'>
+                      <div className='col-lg-4'>
                           <h4>Dane kontaktowe</h4>
                           <p>Izabela Kowalska</p>
                           <div>
@@ -110,6 +115,7 @@ return (
                   </div>
               </div>
           </section>
+          </motion.div>
     )
 };
 

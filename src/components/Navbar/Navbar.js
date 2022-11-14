@@ -1,6 +1,4 @@
 import { Link} from "react-router-dom";
-import {List} from 'react-bootstrap-icons';
-
 
 const Navbar = () => {
 
