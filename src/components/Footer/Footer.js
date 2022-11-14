@@ -35,11 +35,11 @@ return (
     <section className="footer">
         <div className="container">
             <div className="row d-flex justify-content-between pt-3">
-                <div className="col">
+                <div className="col-5 col-md-6">
                     <p className="footer-text">POLITYKA PRYWATNOŚCI</p>
                     <p className="footer-text">2022 © Izabela Kowalska</p>
                 </div>
-                <div className="col d-flex flex-column align-items-end ">
+                <div className="col-7 col-md-6 d-flex flex-column align-items-end ">
                     <div className="">
                         <div className="mb-2">
                             <FaPhoneAlt className="d-inline"/>
