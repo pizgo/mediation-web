@@ -27,9 +27,12 @@
         color: $secondary;
       }
       &:hover:before {
-        left: 0;
-        right: 0;
-        border-bottom: .1rem solid $secondary;
+
+        @include media-breakpoint-up(md) {
+          left: 0;
+          right: 0;
+          border-bottom: .1rem solid $secondary;
+        }
       }
     }
   }
@@ -39,7 +42,7 @@
   border: none;
   color: transparent;
   width: 20px;
-  height: 15px;
+  height: 10px;
   position: relative;
   transition: .5s ease-in-out;
 
