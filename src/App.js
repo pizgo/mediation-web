@@ -20,16 +20,18 @@ function App() {
   return (
       <>
           <Navbar/>
-          <div className="container-fluid">
-            <Routes>
-                <Route path="/mediation-web" element={<LandingPage/>}/>
-                <Route path="/omnie" element={<AboutMe/>}/>
-                <Route path="/omediacjach" element={<AboutMediation/>}/>
-                <Route path="/oferta" element={<Offer/>}/>
-                <Route path="/kontakt" element={<Contact/>}/>
-            </Routes>
-          </div>
+          <div className="content-container d-flex flex-column justify-content-between">
+              <div className="container-fluid">
+                <Routes>
+                    <Route path="/mediation-web" element={<LandingPage/>}/>
+                    <Route path="/omnie" element={<AboutMe/>}/>
+                    <Route path="/omediacjach" element={<AboutMediation/>}/>
+                    <Route path="/oferta" element={<Offer/>}/>
+                    <Route path="/kontakt" element={<Contact/>}/>
+                </Routes>
+              </div>
           <Footer/>
+          </div>
       </>
   );
 }

@@ -46,33 +46,33 @@ const AboutMe = () => {
 
 return (
        <>
-           <h2>O mnie</h2>
-           <div>
-               {aboutMeHeader &&
-               aboutMeHeader.map((aboutTextHeader, index) => (
-                       <h4 key={index}>
-                           {aboutTextHeader.body}
-                       </h4>
-               ))}
-           </div>
-           <div>
-               <div>
-                   {aboutMeImg && aboutMeImg.map((img, index) => (
-                           <img key={index}
-                                src={img.picture.asset.url}
-                                alt={img.picture.alt}/>
-                   ))}
-               </div>
-               <div>
-                   {aboutMeMainText &&
-                   aboutMeMainText.map((aboutTextMain, index) => (
-                           <p key={index}>
-                               {aboutTextMain.body}
-                           </p>
-                   ))}
-               </div>
-           </div>
-           <button>Poznaj moją ofertę</button>
+           {/*<h2>O mnie</h2>*/}
+           {/*<div>*/}
+           {/*    {aboutMeHeader &&*/}
+           {/*    aboutMeHeader.map((aboutTextHeader, index) => (*/}
+           {/*            <h4 key={index}>*/}
+           {/*                {aboutTextHeader.body}*/}
+           {/*            </h4>*/}
+           {/*    ))}*/}
+           {/*</div>*/}
+           {/*<div>*/}
+           {/*    <div>*/}
+           {/*        {aboutMeImg && aboutMeImg.map((img, index) => (*/}
+           {/*                <img key={index}*/}
+           {/*                     src={img.picture.asset.url}*/}
+           {/*                     alt={img.picture.alt}/>*/}
+           {/*        ))}*/}
+           {/*    </div>*/}
+           {/*    <div>*/}
+           {/*        {aboutMeMainText &&*/}
+           {/*        aboutMeMainText.map((aboutTextMain, index) => (*/}
+           {/*                <p key={index}>*/}
+           {/*                    {aboutTextMain.body}*/}
+           {/*                </p>*/}
+           {/*        ))}*/}
+           {/*    </div>*/}
+           {/*</div>*/}
+           {/*<button>Poznaj moją ofertę</button>*/}
        </>
     )
 };
