@@ -37,7 +37,7 @@ const LandingPageAboutMe = () => {
         <section className="landing-aboutMe">
             <div className="container">
                 <div className="row landing-aboutMe-row">
-                    <div className="col-md-6">
+                    <div className="col-md-6" data-aos="fade-right" data-aos-duration="500">
                         <h2 className="fw-bold text-center text-md-start my-3">O mnie</h2>
                         <div className="landing-aboutMe-textContainer">
                             {landingAboutText &&
@@ -51,7 +51,7 @@ const LandingPageAboutMe = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6" data-aos="fade-left" data-aos-duration="500">
                         {landingAboutImg && landingAboutImg.map((img, index) => (
                                    <img className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img" key={index}
                                         src={img.picture.asset.url}
