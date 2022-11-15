@@ -1,5 +1,5 @@
 import photoBig from '../../assets/photoBig.png';
-import {motion} from 'framer-motion';
+
 const LandingPageHead= () => {
 
 return (
@@ -12,7 +12,8 @@ return (
                                     className="img-fluid img-head"/>
                            </div>
                        </div>
-                       <div className="col-md-5 col-lg-6 pt-3 pt-md-0 d-flex flex-column justify-content-center">
+                       <div className="col-md-5 col-lg-6 pt-3 pt-md-0
+                                       d-flex flex-column justify-content-center">
                            <h2 className="display-4 head-name text-center text-md-start pb-1 pb-md-4">Izabela Kowalska</h2>
                            <h3 className="head-desc text-center text-md-start">Mediacje</h3>
                            <h3 className="head-desc text-center text-md-start">Negocjacje</h3>

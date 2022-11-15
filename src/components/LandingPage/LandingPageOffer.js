@@ -1,9 +1,6 @@
 import {useEffect, useState} from "react";
 import sanityClient from "../../client.js";
 import {Link} from "react-router-dom";
-import {motion} from 'framer-motion';
-import {useAnimation} from 'framer-motion';
-import {useInView} from 'react-intersection-observer';
 
 const LandingPageOffer = () => {
     const [landingOfferText, setLandingOfferText] = useState(null);
@@ -26,37 +23,18 @@ const LandingPageOffer = () => {
             .catch(console.error);
     }, []);
 
-    //scroll-triggered animation
-    const {ref, inView} = useInView();
-    const offerCardsAnimation = useAnimation();
-
-    useEffect(() => {
-        const animationEnd = {
-            y: 0,
-            transition: {
-                type: 'spring', duration: 2, ease: 'linear'
-            }
-        };
-        const animationStart = {
-            y: '+100vh'
-        };
-        offerCardsAnimation.start(inView ? animationEnd : animationStart)
-    }, [inView])
-
     return (
         <section className="landingPage-offer">
             <div className="container">
                 <div className="row text-center my-5">
                      <h2 className="fw-bold my-3">Jak mogę ci pomóc?</h2>
                 </div>
-                <div ref={ref}>
-                    <motion.div animate={offerCardsAnimation}>
                     <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
                     landingOfferText.map((text, index) => (
                         <div className="col-xxl-4 col-md-6 my-3 col-offer">
                             <Link className="offer-link link-dark" to="/oferta">
-                                <div className="card offer-card px-3 pt-4 mb-4 mb-md-5 position-relative">
+                                <div className="card offer-card px-3 pt-4 mb-4 mb-md-5 position-relative" data-aos="fade-up" data-aos-duration="500">
                                     <span key={index}>
                                         <div className="img-background position-absolute top-0 start-50 translate-middle "></div>
                                         <img
@@ -71,8 +49,6 @@ const LandingPageOffer = () => {
                             </Link>
                         </div>))}
                     </div>
-                    </motion.div>
-                </div>
             </div>
         </section>
     );

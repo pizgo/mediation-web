@@ -6,17 +6,17 @@ import AboutMediation from "./components/AboutMediation/AboutMediation";
 import Offer from "./components/Offer/Offer";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import {useEffect} from "react";
 import { Route, Routes } from "react-router-dom";
-import Aos from 'aos';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function App() {
-    Aos.init({
-        duration: 1500,
-        debounceDelay: 300,
-        once: true,
-        delay: 50,
-        offset: 200,
-    });
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
       <>
           <Navbar/>
