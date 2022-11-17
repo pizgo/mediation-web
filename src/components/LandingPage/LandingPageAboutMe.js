@@ -38,7 +38,7 @@ const LandingPageAboutMe = () => {
             <div className="container">
                 <div className="row landing-aboutMe-row">
                     <div className="col-md-6" data-aos="fade-right" data-aos-duration="500">
-                        <h2 className="fw-bold text-center text-md-start my-3">O mnie</h2>
+                        <h2 className="header text-center text-md-start">O mnie</h2>
                         <div className="landing-aboutMe-textContainer">
                             {landingAboutText &&
                             landingAboutText.map((aboutText, index) => (
