@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import sanityClient from "../../client.js";
+import {motion} from "framer-motion";
 
 const AboutMe = () => {
     const [aboutMeHeader, setAboutMeHeader] = useState(null);
@@ -45,8 +46,12 @@ const AboutMe = () => {
     }, []);
 
 return (
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ease: "easeOut", duration: 1}}>
        <section className="aboutMe-section">
-           <section className="introText">
+           <section className="introText mt-5">
                <div className="container-fluid">
                    {aboutMeHeader &&
                    aboutMeHeader.map((aboutTextHeader, index) => (
@@ -59,7 +64,7 @@ return (
                <div className="row header-row">
                    <h2 className="header">O mnie</h2>
                </div>
-               <div className="row">
+               <div className="row mb-5">
                    <div className="col-md-6" data-aos="fade-right" data-aos-duration="500">
                        <div>
                            {aboutMeImg && aboutMeImg.map((img, index) => (
@@ -73,16 +78,16 @@ return (
                    <div className="col-md-6" data-aos="fade-left" data-aos-duration="500">
                        {aboutMeMainText &&
                        aboutMeMainText.map((aboutTextMain, index) => (
-                           <p className="basic-text landing-aboutMe-text mt-5" key={index}>
+                           <p className="basic-text" key={index}>
                                {aboutTextMain.body}
                            </p>
                        ))}
+                       <button className="button my-3">Poznaj moją ofertę</button>
                    </div>
                </div>
-                   <button className="button landing-aboutMe-btn mb-3 mb-md-0 mt-md-3">Poznaj moją ofertę</button>
            </div>
-
        </section>
+    </motion.div>
     )
 };
 
