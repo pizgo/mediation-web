@@ -51,20 +51,18 @@ return (
         animate={{ opacity: 1 }}
         transition={{ease: "easeOut", duration: 1}}>
        <section className="aboutMe-section">
-           <section className="introText mt-5">
-               <div className="container-fluid">
+           <section className="intro mt-5">
+               <div className="container">
+                       <h2 className="header introHeader">O mnie</h2>
                    {aboutMeHeader &&
                    aboutMeHeader.map((aboutTextHeader, index) => (
-                       <p className="text text-center" key={index}>
+                       <p className="introText" key={index}>
                            {aboutTextHeader.body}</p>
                    ))}
                </div>
            </section>
            <div className="container">
-               <div className="row header-row">
-                   <h2 className="header">O mnie</h2>
-               </div>
-               <div className="row  aboutMe-row">
+               <div className="row aboutMe-row">
                    <div className="col-md-6" data-aos="fade-right" data-aos-duration="500">
                        <div>
                            {aboutMeImg && aboutMeImg.map((img, index) => (
