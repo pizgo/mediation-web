@@ -64,7 +64,7 @@ return (
                <div className="row header-row">
                    <h2 className="header">O mnie</h2>
                </div>
-               <div className="row mb-5">
+               <div className="row  aboutMe-row">
                    <div className="col-md-6" data-aos="fade-right" data-aos-duration="500">
                        <div>
                            {aboutMeImg && aboutMeImg.map((img, index) => (
@@ -75,7 +75,7 @@ return (
                            ))}
                        </div>
                    </div>
-                   <div className="col-md-6" data-aos="fade-left" data-aos-duration="500">
+                   <div className="col-md-6 mt-5 mt-md-0" data-aos="fade-left" data-aos-duration="500">
                        {aboutMeMainText &&
                        aboutMeMainText.map((aboutTextMain, index) => (
                            <p className="basic-text" key={index}>
