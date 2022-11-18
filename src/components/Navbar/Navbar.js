@@ -18,7 +18,7 @@ return (
                        <span className="toggler-icon middle-bar"></span>
                        <span className="toggler-icon bottom-bar"></span>
                    </button>
-                   <div className="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
+                   <div className="navbar-container collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
                        <ul className="navbar-nav menu">
                            <li className="nav-item active">
                                <Link className="nav-link nav-link-color" aria-current="page" to="/mediation-web">
