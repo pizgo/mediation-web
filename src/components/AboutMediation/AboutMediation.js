@@ -3,28 +3,15 @@ import sanityClient from "../../client.js";
 import {motion} from "framer-motion";
 
 const AboutMediation = () => {
-    const [aboutMediation, setAboutMeHeader] = useState(null);
-    const [aboutMeMainText, setAboutMeMainText] = useState(null);
-    const [aboutMeImg, setAboutMeImg] = useState(null)
+    const [aboutMediation, setAboutMediation] = useState(null);
 
     useEffect(() => {
         sanityClient.fetch(
-            `*[_type == "plainText" && title == "Wstep na stronie o mnie"]{
+            `*[_type == "plainText" && title == "Wstep na stronie o mediacji"]{
             body
         }`)
             .then((data) => {
-                setAboutMeHeader(data)
-            })
-            .catch(console.error);
-    }, []);
-
-    useEffect(() => {
-        sanityClient.fetch(
-            `*[_type == "plainText" && title == "O mnie glowne"]{
-            body
-        }`)
-            .then((data) => {
-                setAboutMeMainText(data)
+                setAboutMediation(data)
             })
             .catch(console.error);
     }, []);
@@ -39,8 +26,8 @@ const AboutMediation = () => {
                    <section className="intro mt-5">
                        <div className="container">
                            <h2 className="header introHeader">Dlaczego warto zaufać mediacji?</h2>
-                           {aboutMeHeader &&
-                           aboutMeHeader.map((aboutTextHeader, index) => (
+                           {aboutMediation &&
+                           aboutMediation.map((aboutTextHeader, index) => (
                                <p className="introText" key={index}>
                                    {aboutTextHeader.body}</p>
                            ))}
