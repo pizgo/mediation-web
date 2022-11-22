@@ -3,7 +3,7 @@ import sanityClient from "../../client.js";
 import {motion} from "framer-motion";
 
 const AboutMediation = () => {
-    const [aboutMeHeader, setAboutMeHeader] = useState(null);
+    const [aboutMediation, setAboutMeHeader] = useState(null);
     const [aboutMeMainText, setAboutMeMainText] = useState(null);
     const [aboutMeImg, setAboutMeImg] = useState(null)
 

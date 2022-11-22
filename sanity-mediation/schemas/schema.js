@@ -13,6 +13,7 @@ import plainText from './plainText'
 import offer from "./offer";
 import contact from "./contact";
 import picture from "./picture";
+import faq from "./faq";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,13 +24,14 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    post,
-    author,
-    category,
+    // post,
+    // author,
+    // category,
     plainText,
     offer,
     contact,
     picture,
+    faq,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
