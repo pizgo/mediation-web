@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 
 const AboutMediation = () => {
     const [aboutMediation, setAboutMediation] = useState(null);
+    const [faq, setFaq] = useState(null);
 
     useEffect(() => {
         sanityClient.fetch(
@@ -12,6 +13,18 @@ const AboutMediation = () => {
         }`)
             .then((data) => {
                 setAboutMediation(data)
+            })
+            .catch(console.error);
+    }, []);
+
+    useEffect(() => {
+        sanityClient.fetch(
+            `*[_type == "faq"]{
+            body,
+            title
+        }`)
+            .then((data) => {
+                setFaq(data)
             })
             .catch(console.error);
     }, []);
@@ -27,14 +40,14 @@ const AboutMediation = () => {
                        <div className="container">
                            <h2 className="header introHeader">Dlaczego warto zaufać mediacji?</h2>
                            {aboutMediation &&
-                           aboutMediation.map((aboutTextHeader, index) => (
+                           aboutMediation.map((aboutMediationTextHeader, index) => (
                                <p className="introText" key={index}>
-                                   {aboutTextHeader.body}</p>
+                                   {aboutMediationTextHeader.body}</p>
                            ))}
                        </div>
                    </section>
                    <div className="container">
-                       <div className="accordion" id="accordionExample">
+                       <div className="accordion">
                            <div className="accordion-item">
                                <h2 className="accordion-header" id="headingOne">
                                    <button className="accordion-button" type="button" data-bs-toggle="collapse"
@@ -46,13 +59,7 @@ const AboutMediation = () => {
                                <div id="collapseOne" className="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                       <strong>This is the first item's accordion body.</strong> It is shown by default,
-                                       until the collapse plugin adds the appropriate classes that we use to style each
-                                       element. These classes control the overall appearance, as well as the showing and
-                                       hiding via CSS transitions. You can modify any of this with custom CSS or
-                                       overriding our default variables. It's also worth noting that just about any HTML
-                                       can go within the <code>.accordion-body</code>, though the transition does limit
-                                       overflow.
+                                       pierwszy
                                    </div>
                                </div>
                            </div>
@@ -67,13 +74,7 @@ const AboutMediation = () => {
                                <div id="collapseTwo" className="accordion-collapse collapse"
                                     aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                       <strong>This is the second item's accordion body.</strong> It is hidden by
-                                       default, until the collapse plugin adds the appropriate classes that we use to
-                                       style each element. These classes control the overall appearance, as well as the
-                                       showing and hiding via CSS transitions. You can modify any of this with custom
-                                       CSS or overriding our default variables. It's also worth noting that just about
-                                       any HTML can go within the <code>.accordion-body</code>, though the transition
-                                       does limit overflow.
+                                       drugi
                                    </div>
                                </div>
                            </div>
@@ -88,13 +89,7 @@ const AboutMediation = () => {
                                <div id="collapseThree" className="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                       <strong>This is the third item's accordion body.</strong> It is hidden by
-                                       default, until the collapse plugin adds the appropriate classes that we use to
-                                       style each element. These classes control the overall appearance, as well as the
-                                       showing and hiding via CSS transitions. You can modify any of this with custom
-                                       CSS or overriding our default variables. It's also worth noting that just about
-                                       any HTML can go within the <code>.accordion-body</code>, though the transition
-                                       does limit overflow.
+                                       trzeci
                                    </div>
                                </div>
                            </div>
