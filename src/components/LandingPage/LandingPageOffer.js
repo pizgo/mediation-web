@@ -19,6 +19,7 @@ const LandingPageOffer = () => {
         }`)
             .then((data) => {
                 setLandingOfferText(data)
+                console.log(data)
             })
             .catch(console.error);
     }, []);

@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 
 const AboutMediation = () => {
     const [aboutMediation, setAboutMediation] = useState(null);
-    const [faq, setFaq] = useState(null);
+    const [FAQ, setFAQ] = useState(null);
 
     useEffect(() => {
         sanityClient.fetch(
@@ -24,7 +24,8 @@ const AboutMediation = () => {
             title
         }`)
             .then((data) => {
-                setFaq(data)
+                setFAQ(data)
+                console.log(data)
             })
             .catch(console.error);
     }, []);
@@ -47,55 +48,28 @@ const AboutMediation = () => {
                        </div>
                    </section>
                    <div className="container">
-                       <div className="accordion">
-                           <div className="accordion-item">
-                               <h2 className="accordion-header" id="headingOne">
-                                   <button className="accordion-button" type="button" data-bs-toggle="collapse"
-                                           data-bs-target="#collapseOne" aria-expanded="true"
-                                           aria-controls="collapseOne">
-                                       Accordion Item #1
-                                   </button>
-                               </h2>
-                               <div id="collapseOne" className="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                   <div className="accordion-body">
-                                       pierwszy
+                       <div className="accordion" id="accordionMediation">
+                           {FAQ && FAQ.map((text, index) => (
+                               <div className="accordion-item">
+                                   <h2 className="accordion-header" id={'heading'+ index}>
+                                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                               data-bs-target={'#collapse'+ index} aria-expanded="true"
+                                               aria-controls={'collapse'+ index}>
+                                           {text.title}
+                                       </button>
+                                   </h2>
+                                   <div id={'collapse'+ index} className="accordion-collapse collapse"
+                                        aria-labelledby={'heading'+ index} data-bs-parent="#accordionMediation">
+                                       <div className="accordion-body">
+                                           {text.body}
+                                       </div>
                                    </div>
-                               </div>
-                           </div>
-                           <div className="accordion-item">
-                               <h2 className="accordion-header" id="headingTwo">
-                                   <button className="accordion-button collapsed" type="button"
-                                           data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                           aria-controls="collapseTwo">
-                                       Accordion Item #2
-                                   </button>
-                               </h2>
-                               <div id="collapseTwo" className="accordion-collapse collapse"
-                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                   <div className="accordion-body">
-                                       drugi
-                                   </div>
-                               </div>
-                           </div>
-                           <div className="accordion-item">
-                               <h2 className="accordion-header" id="headingThree">
-                                   <button className="accordion-button collapsed" type="button"
-                                           data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                           aria-expanded="false" aria-controls="collapseThree">
-                                       Accordion Item #3
-                                   </button>
-                               </h2>
-                               <div id="collapseThree" className="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                   <div className="accordion-body">
-                                       trzeci
-                                   </div>
-                               </div>
-                           </div>
+                               </div>))}
                        </div>
                    </div>
                </section>
+
+
            </motion.div>
     )
 };
