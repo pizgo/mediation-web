@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/mediation-web/static/css/main.0b356b53.css",
-    "main.js": "/mediation-web/static/js/main.135444f2.js",
+    "main.css": "/mediation-web/static/css/main.1d283b2b.css",
+    "main.js": "/mediation-web/static/js/main.ad920f4a.js",
     "static/media/photoBig.png": "/mediation-web/static/media/photoBig.5d8a7ae325f605fa89a6.png",
     "index.html": "/mediation-web/index.html",
-    "main.0b356b53.css.map": "/mediation-web/static/css/main.0b356b53.css.map",
-    "main.135444f2.js.map": "/mediation-web/static/js/main.135444f2.js.map"
+    "main.1d283b2b.css.map": "/mediation-web/static/css/main.1d283b2b.css.map",
+    "main.ad920f4a.js.map": "/mediation-web/static/js/main.ad920f4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b356b53.css",
-    "static/js/main.135444f2.js"
+    "static/css/main.1d283b2b.css",
+    "static/js/main.ad920f4a.js"
   ]
 }
