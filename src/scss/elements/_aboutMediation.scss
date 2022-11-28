@@ -2,8 +2,20 @@
   max-width: 70%;
 }
 
-.accordion-button
+.accordion-button {
+
+  &:not(.collapsed) {
+    background: $secondary;
+    color: white;
+
+    &::after {
+      filter: brightness(0%) invert(100%);
+    }
+  }
 
   &:focus {
-  
+    box-shadow: none;
+  }
+
+
 }
