@@ -5,7 +5,7 @@
 .accordion-button {
 
   &:not(.collapsed) {
-    background: $secondary;
+    background: rgba($secondary, 0.75);
     color: white;
 
     &::after {
