@@ -47,7 +47,7 @@ const LandingPageAboutMe = () => {
                                 </p>
                             ))}
                             <Link className="offer-link link-dark" to="/oferta">
-                                <button>Dowiedz się więcej</button>
+                                <button className='button'>Dowiedz się więcej</button>
                             </Link>
                         </div>
                     </div>

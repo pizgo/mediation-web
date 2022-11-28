@@ -27,8 +27,8 @@ const LandingPageOffer = () => {
     return (
         <section className="landingPage-offer">
             <div className="container">
-                <div className="row header-row">
-                     <h2 className="header">Jak mogę ci pomóc?</h2>
+                <div className="row header-row my-5">
+                     <h3 className="header">Jak mogę ci pomóc?</h3>
                 </div>
                     <div className="row pt-lg-5 mb-5">
                     {landingOfferText &&
