@@ -47,12 +47,12 @@ const AboutMediation = () => {
                            ))}
                        </div>
                    </section>
-                   <div className="container">
-                       <div className="accordion" id="accordionMediation">
+                   <div className="container accordionContainer">
+                       <div className="accordion accordion-flush" id="accordionMediation">
                            {FAQ && FAQ.map((text, index) => (
                                <div className="accordion-item">
                                    <h2 className="accordion-header" id={'heading'+ index}>
-                                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                       <button className="accordion-button collapsed secondary" type="button" data-bs-toggle="collapse"
                                                data-bs-target={'#collapse'+ index} aria-expanded="true"
                                                aria-controls={'collapse'+ index}>
                                            {text.title}
