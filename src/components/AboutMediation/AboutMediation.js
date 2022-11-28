@@ -60,7 +60,7 @@ const AboutMediation = () => {
                                    </h2>
                                    <div id={'collapse'+ index} className="accordion-collapse collapse"
                                         aria-labelledby={'heading'+ index} data-bs-parent="#accordionMediation">
-                                       <div className="accordion-body">
+                                       <div className="accordion-body py-4 py-lg-5">
                                            {text.body}
                                        </div>
                                    </div>
