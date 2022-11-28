@@ -4,6 +4,11 @@
   left: 0;
   background-color: $white;
   width: 100vw;
+
+  @include media-breakpoint-up(lg) {
+    top: 13px;
+    background: none;
+  }
 }
 
 .menu {
