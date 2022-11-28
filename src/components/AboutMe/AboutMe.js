@@ -53,7 +53,7 @@ return (
        <section className="aboutMe-section">
            <section className="intro mt-5">
                <div className="container">
-                       <h2 className="header introHeader">O mnie</h2>
+                       <h3 className="header introHeader">O mnie</h3>
                    {aboutMeHeader &&
                    aboutMeHeader.map((aboutTextHeader, index) => (
                        <p className="introText" key={index}>

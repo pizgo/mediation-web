@@ -39,7 +39,7 @@ const AboutMediation = () => {
                <section className="aboutMediation-section">
                    <section className="intro mt-5">
                        <div className="container">
-                           <h2 className="header introHeader">Dlaczego warto zaufać mediacji?</h2>
+                           <h3 className="header introHeader">Dlaczego warto zaufać mediacji?</h3>
                            {aboutMediation &&
                            aboutMediation.map((aboutMediationTextHeader, index) => (
                                <p className="introText" key={index}>
@@ -47,7 +47,7 @@ const AboutMediation = () => {
                            ))}
                        </div>
                    </section>
-                   <div className="container accordionContainer">
+                   <div className="container">
                        <div className="accordion accordion-flush" id="accordionMediation">
                            {FAQ && FAQ.map((text, index) => (
                                <div className="accordion-item">
