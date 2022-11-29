@@ -67,11 +67,13 @@ return (
                   <div className='row contact-row'>
                       <div className='col-6'>
                         <h4 className="mb-5">Masz pytanie? Wypełnij formularz</h4>
-                          <form onSubmit={handleSubmit}>
+                          <form
+                                onSubmit={handleSubmit}>
                               <div className="mb-3">
-                                  <textarea onChange={handleChange}
+                                  <input onChange={handleChange}
+                                         type='text'
                                          name="name"
-                                         className="form-control"
+                                         className="form-control mb-4"
                                          value={input.name}
                                          placeholder="Twoje imię i nazwisko"/>
                               </div>
@@ -79,7 +81,7 @@ return (
                                   <input onChange={handleChange}
                                          type="email"
                                          name="email"
-                                         className="form-control"
+                                         className="form-control mb-4"
                                          value={input.email}
                                          placeholder="Twój adres e-mail"/>
                               </div>
@@ -87,6 +89,7 @@ return (
                                   <textarea onChange={handleChange}
                                          name="message"
                                          className="form-control"
+                                            rows='8'
                                          value={input.message}
                                          placeholder="Miejsce na Twoją wiadomość"/>
                               </div>
