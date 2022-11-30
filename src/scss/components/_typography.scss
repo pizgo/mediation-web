@@ -81,7 +81,11 @@
 }
 
 .contactType {
-  margin-top: 2rem;
+  margin: 1.5rem 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 2rem 0;
+  }
 }
 
 .contactIcon {

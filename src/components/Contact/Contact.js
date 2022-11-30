@@ -66,7 +66,7 @@ return (
                   </div>
                   <div className='row contact-row g-5'>
                       <div className='col-12 col-md-6'>
-                        <h4 className="mb-3 mb-md-5 text-center">Masz pytanie? Wypełnij formularz</h4>
+                        <h4 className="mb-4 mb-md-5 text-center">Masz pytanie? Wypełnij formularz</h4>
                           <form
                                 onSubmit={handleSubmit}>
                               <div className="mb-3">
@@ -106,8 +106,8 @@ return (
                               <button className="button my-4" type="submit">Wyślij</button>
                           </form>
                       </div>
-                      <div className='col-12 col-md-6'>
-                          <h4 className='mb-3 mb-md-5 text-center'>Dane kontaktowe</h4>
+                      <div className='col-12 col-md-6' mb-5>
+                          <h4 className='mb-4 mb-md-5 text-center'>Dane kontaktowe</h4>
                               <h5 className='fw-bold'>Izabela Kowalska</h5>
                               <div className='contactType'>
                                   <p className='contactText fw-bold'>Telefon: </p>
