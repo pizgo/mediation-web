@@ -64,9 +64,9 @@ return (
                   <div className='row text-center my-4'>
                       <h3 className="fw-bold my-5">Kontakt</h3>
                   </div>
-                  <div className='row contact-row'>
-                      <div className='col-6'>
-                        <h4 className="mb-5">Masz pytanie? Wypełnij formularz</h4>
+                  <div className='row contact-row g-5'>
+                      <div className='col-12 col-md-6'>
+                        <h4 className="mb-3 mb-md-5 text-center">Masz pytanie? Wypełnij formularz</h4>
                           <form
                                 onSubmit={handleSubmit}>
                               <div className="mb-3">
@@ -103,24 +103,26 @@ return (
                                           zapoznałem/am się z Polityką Prywatności
                                       </label>
                               </div>
-                              <button className="button" type="submit">Wyślij</button>
+                              <button className="button my-4" type="submit">Wyślij</button>
                           </form>
                       </div>
-                      <div className='col-6'>
-                          <h4>Dane kontaktowe</h4>
-                          <p>Izabela Kowalska</p>
-                          <div>
-                              <FaPhoneAlt/>
-                              {phoneNumber && phoneNumber.map((number, index) => (
-                                  <p key={index}>{number.body}</p>
-                              ))}
-                          </div>
-                          <div>
-                              <GrMail/>
-                              {email && email.map((address, index) => (
-                                  <p key={index}>{address.body}</p>
-                              ))}
-                          </div>
+                      <div className='col-12 col-md-6'>
+                          <h4 className='mb-3 mb-md-5 text-center'>Dane kontaktowe</h4>
+                              <h5 className='fw-bold'>Izabela Kowalska</h5>
+                              <div className='contactType'>
+                                  <p className='contactText fw-bold'>Telefon: </p>
+                                  {/*<FaPhoneAlt className="contactIcon"/>*/}
+                                  {phoneNumber && phoneNumber.map((number, index) => (
+                                      <p className='contactText' key={index}>{number.body}</p>
+                                  ))}
+                              </div>
+                              <div className='contactType'>
+                                  <p className='contactText fw-bold'>Adres email: </p>
+                                  {/*<GrMail className="contactIcon"/>*/}
+                                  {email && email.map((address, index) => (
+                                      <p className='contactText' key={index}>{address.body}</p>
+                                  ))}
+                              </div>
                       </div>
                   </div>
               </div>
