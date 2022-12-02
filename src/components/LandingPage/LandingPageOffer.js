@@ -19,7 +19,6 @@ const LandingPageOffer = () => {
         }`)
             .then((data) => {
                 setLandingOfferText(data)
-                console.log(data)
             })
             .catch(console.error);
     }, []);
@@ -42,9 +41,11 @@ const LandingPageOffer = () => {
                                             className="img-offer img-fluid
                                                position-absolute top-0 start-50 translate-middle"
                                             src={text.mainImage.asset.url}
-                                            alt={text.mainImage.alt}/>
-                                            <p className="card-title text-center fw-bold pt-4 pt-lg-5">{text.title}</p>
-                                            <p className="card-body basic-text">{text.body}</p>
+                                            alt={text.mainImage.alt}
+                                            key={index}/>
+                                            <p className="card-title text-center fw-bold pt-4 pt-lg-5"
+                                               key={index}>{text.title}</p>
+                                            <p className="card-body basic-text"n>{text.body}</p>
                                     </span>
                                 </div>
                             </Link>
