@@ -30,6 +30,36 @@ const AboutMediation = () => {
             .catch(console.error);
     }, []);
 
+    const introText = (
+        <>
+            {aboutMediation &&
+            aboutMediation.map((aboutMediationTextHeader, index) => (
+                <p className="introText" key={index}>
+                    {aboutMediationTextHeader.body}</p>
+            ))}
+        </>
+    );
+
+    const faqAccordion = (
+        <>
+            {FAQ && FAQ.map((text, index) => (
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id={'heading'+ index}>
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target={'#collapse'+ index} aria-expanded="true"
+                                aria-controls={'collapse'+ index}>
+                            {text.title}
+                        </button>
+                    </h2>
+                    <div id={'collapse'+ index} className="accordion-collapse collapse"
+                         aria-labelledby={'heading'+ index} data-bs-parent="#accordionMediation">
+                        <div className="accordion-body py-4 py-lg-5">
+                            {text.body}
+                        </div>
+                    </div>
+                </div>))}
+        </>
+    )
 
     return (
            <motion.div
@@ -40,36 +70,15 @@ const AboutMediation = () => {
                    <section className="intro mt-5">
                        <div className="container">
                            <h3 className="header introHeader">Dlaczego warto zaufać mediacji?</h3>
-                           {aboutMediation &&
-                           aboutMediation.map((aboutMediationTextHeader, index) => (
-                               <p className="introText" key={index}>
-                                   {aboutMediationTextHeader.body}</p>
-                           ))}
+                           {introText}
                        </div>
                    </section>
                    <div className="container">
                        <div className="accordion accordion-flush" id="accordionMediation">
-                           {FAQ && FAQ.map((text, index) => (
-                               <div className="accordion-item">
-                                   <h2 className="accordion-header" id={'heading'+ index}>
-                                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                               data-bs-target={'#collapse'+ index} aria-expanded="true"
-                                               aria-controls={'collapse'+ index}>
-                                           {text.title}
-                                       </button>
-                                   </h2>
-                                   <div id={'collapse'+ index} className="accordion-collapse collapse"
-                                        aria-labelledby={'heading'+ index} data-bs-parent="#accordionMediation">
-                                       <div className="accordion-body py-4 py-lg-5">
-                                           {text.body}
-                                       </div>
-                                   </div>
-                               </div>))}
+                           {faqAccordion}
                        </div>
                    </div>
                </section>
-
-
            </motion.div>
     )
 };
