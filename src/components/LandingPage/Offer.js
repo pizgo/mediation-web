@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
 
-const LandingPageOffer = () => {
+const Offer = () => {
   const [landingOfferText, setLandingOfferText] = useState(null);
 
   useEffect(() => {
@@ -64,4 +64,4 @@ const LandingPageOffer = () => {
   );
 };
 
-export default LandingPageOffer;
+export default Offer;

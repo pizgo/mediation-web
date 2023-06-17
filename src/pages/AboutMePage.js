@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import sanityClient from "../../client.js";
+import sanityClient from "../client.js";
 import { motion } from "framer-motion";
 
-const AboutMe = () => {
+const AboutMePage = () => {
   const [aboutMeHeader, setAboutMeHeader] = useState(null);
   const [aboutMeMainText, setAboutMeMainText] = useState(null);
   const [aboutMeImg, setAboutMeImg] = useState(null);
@@ -108,4 +108,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutMePage;

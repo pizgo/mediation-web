@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
 
-const LandingPageAboutMe = () => {
+const AboutMe = () => {
   const [landingAboutText, setLandingAboutText] = useState(null);
   const [landingAboutImg, setLandingAboutImg] = useState(null);
 
@@ -83,4 +83,4 @@ const LandingPageAboutMe = () => {
   );
 };
 
-export default LandingPageAboutMe;
+export default AboutMe;

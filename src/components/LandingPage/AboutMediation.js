@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 
-const LandingPageAboutMediation = () => {
+const AboutMediation = () => {
   const [landingHeadText, setLandingHeadText] = useState(null);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const LandingPageAboutMediation = () => {
   );
 };
 
-export default LandingPageAboutMediation;
+export default AboutMediation;

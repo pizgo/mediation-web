@@ -1,10 +1,10 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import LandingPage from "./components/LandingPage/LandingPage";
-import AboutMe from "./components/AboutMe/AboutMe";
-import AboutMediation from "./components/AboutMediation/AboutMediation";
-import Offer from "./components/Offer/Offer";
-import Contact from "./components/Contact/Contact";
+import LandingPage from "./pages/LandingPage";
+import AboutMePage from "./pages/AboutMePage";
+import AboutMediationPage from "./pages/AboutMediationPage";
+import OfferPage from "./pages/OfferPage";
+import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -23,10 +23,10 @@ function App() {
         <div className="container-fluid">
           <Routes>
             <Route path="/mediation-web" element={<LandingPage />} />
-            <Route path="/omnie" element={<AboutMe />} />
-            <Route path="/omediacjach" element={<AboutMediation />} />
-            <Route path="/oferta" element={<Offer />} />
-            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/omnie" element={<AboutMePage />} />
+            <Route path="/omediacjach" element={<AboutMediationPage />} />
+            <Route path="/oferta" element={<OfferPage />} />
+            <Route path="/kontakt" element={<ContactPage />} />
           </Routes>
         </div>
         <Footer />

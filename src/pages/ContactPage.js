@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import sanityClient from "../../client.js";
+import sanityClient from "../client.js";
 import { GrMail } from "react-icons/gr";
 import { FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const ContactPage = () => {
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -161,7 +161,7 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
 
 // <form onSubmit={handleSubmit}>
 //                               <div>

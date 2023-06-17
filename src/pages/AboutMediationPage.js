@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import sanityClient from "../../client.js";
+import sanityClient from "../client.js";
 import { motion } from "framer-motion";
 
-const AboutMediation = () => {
+const AboutMediationPage = () => {
   const [aboutMediation, setAboutMediation] = useState(null);
   const [FAQ, setFAQ] = useState(null);
 
@@ -100,4 +100,4 @@ const AboutMediation = () => {
   );
 };
 
-export default AboutMediation;
+export default AboutMediationPage;
