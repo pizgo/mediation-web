@@ -1,8 +1,5 @@
 const Offer = () => {
-
-return (
-       <></>
-    )
+  return <></>;
 };
 
 export default Offer;

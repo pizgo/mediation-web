@@ -1,20 +1,20 @@
 //THEME COLORS:
-$gold: #D7AE1F;
+$gold: #d7ae1f;
 $lightgold: #dfbf58;
-$green: #6CA483;
-$lightgrey: #F8F9FA;
+$green: #6ca483;
+$lightgrey: #f8f9fa;
 
 $primary: $lightgold;
 $secondary: $green;
 
 //SHADOW
-$shadow: 0 10px 12px rgba(0,0,0,.08), 0 0 10px rgba(0,0,0,.05);
-$shadowTransition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-$shadowAction: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+$shadow: 0 10px 12px rgba(0, 0, 0, 0.08), 0 0 10px rgba(0, 0, 0, 0.05);
+$shadowTransition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+  0.3s box-shadow,
+  0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+$shadowAction: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 
 $thumbnail-padding: 0.5rem;
 $thumbnail-border-radius: 0;
-
-
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

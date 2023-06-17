@@ -5,11 +5,12 @@ In order to provide the client with the most flexible approach, almost all of th
 
 You can check it on: https://pizgo.github.io/mediation-web</br>
 
-
 #### Current features:
+
 1. providing users with infofrmation about the client's business
 
 #### What is still in progress:
+
 1. contact form linked to the EmailJS
 2. the offer component
 
@@ -18,9 +19,9 @@ You can check it on: https://pizgo.github.io/mediation-web</br>
 1. JS ES6
 2. React
 3. Sanity Studio
-3. Bootstrap + Sass
-4. AOS
-5. react-router
-6. react-scroll
-7. Framer motion
-8. react-icons
+4. Bootstrap + Sass
+5. AOS
+6. react-router
+7. react-scroll
+8. Framer motion
+9. react-icons

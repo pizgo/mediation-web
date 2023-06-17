@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
 import AboutMe from "./components/AboutMe/AboutMe";
@@ -6,33 +6,32 @@ import AboutMediation from "./components/AboutMediation/AboutMediation";
 import Offer from "./components/Offer/Offer";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-
-    useEffect(() => {
-        AOS.init();
-    }, [])
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-      <>
-          <Navbar/>
-          <div className="content-container d-flex flex-column justify-content-between">
-              <div className="container-fluid">
-                <Routes>
-                    <Route path="/mediation-web" element={<LandingPage/>}/>
-                    <Route path="/omnie" element={<AboutMe/>}/>
-                    <Route path="/omediacjach" element={<AboutMediation/>}/>
-                    <Route path="/oferta" element={<Offer/>}/>
-                    <Route path="/kontakt" element={<Contact/>}/>
-                </Routes>
-              </div>
-          <Footer/>
-          </div>
-      </>
+    <>
+      <Navbar />
+      <div className="content-container d-flex flex-column justify-content-between">
+        <div className="container-fluid">
+          <Routes>
+            <Route path="/mediation-web" element={<LandingPage />} />
+            <Route path="/omnie" element={<AboutMe />} />
+            <Route path="/omediacjach" element={<AboutMediation />} />
+            <Route path="/oferta" element={<Offer />} />
+            <Route path="/kontakt" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
