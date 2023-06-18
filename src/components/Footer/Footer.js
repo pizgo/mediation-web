@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <section className="footer">
       <div className="container">
-        <div className="row d-flex justify-content-between py-3">
+        <div className="row d-flex justify-content-between py-4">
           <div className="col-5 col-md-6">
             <p className="footer-text d-block mx-0">POLITYKA PRYWATNOŚCI</p>
             <p className="footer-text mx-0">2022 © Izabela Kowalska</p>

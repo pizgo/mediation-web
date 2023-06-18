@@ -4,11 +4,12 @@ import sanityClient from "../client"
 const IntroductionText = (props) => {
     const [text, setText] = useState(null);
 
-    const textToSend = "Wstep na stronie glownej"
+
+    console.log(props.name)
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == "plainText" && title == ${textToSend}]{body}`)
+            .fetch(`*[_type == "plainText" && title == ${props.name}]{body}`)
             .then((data) => {
                 setText(data);
             })
