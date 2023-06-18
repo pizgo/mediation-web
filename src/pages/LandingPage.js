@@ -14,7 +14,7 @@ const LandingPage = () => {
         transition={{ ease: "easeOut", duration: 1 }}>
         <Hero />
           <main>
-              <IntroductionText name='"Wstep na stronie glownej"'/>
+              <IntroductionText fetchName='"Wstep na stronie glownej"'/>
               <Offer />
               <AboutMe />
           </main>

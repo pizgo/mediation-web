@@ -9,7 +9,7 @@ const IntroductionText = (props) => {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == "plainText" && title == ${props.name}]{body}`)
+            .fetch(`*[_type == "plainText" && title == ${props.fetchName}]{body}`)
             .then((data) => {
                 setText(data);
             })
@@ -20,6 +20,7 @@ const IntroductionText = (props) => {
         <section className="intro">
             <div className="container">
                 <div className="row introRow">
+                    <h3 className="header introHeader">{props.title}</h3>
                     {text &&
                         text.map((el, index) => (
                             <p className="introText" key={index}>

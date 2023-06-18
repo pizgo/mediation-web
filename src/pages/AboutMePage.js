@@ -3,24 +3,25 @@ import sanityClient from "../client.js";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
 import {Link} from "react-router-dom";
+import IntroductionText from "../components/IntroductionText";
 
 const AboutMePage = () => {
   const [aboutMeHeader, setAboutMeHeader] = useState(null);
   const [aboutMeMainText, setAboutMeMainText] = useState(null);
   const [aboutMeImg, setAboutMeImg] = useState(null);
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "plainText" && title == "Wstep na stronie o mnie"]{
-            body
-        }`
-      )
-      .then((data) => {
-        setAboutMeHeader(data);
-      })
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type == "plainText" && title == "Wstep na stronie o mnie"]{
+  //           body
+  //       }`
+  //     )
+  //     .then((data) => {
+  //       setAboutMeHeader(data);
+  //     })
+  //     .catch(console.error);
+  // }, []);
 
   useEffect(() => {
     sanityClient
@@ -60,17 +61,18 @@ const AboutMePage = () => {
       transition={{ ease: "easeOut", duration: 1 }}
     >
       <section className="aboutMe-section">
-        <section className="intro mt-5">
-          <div className="container">
-            <h3 className="header introHeader">O mnie</h3>
-            {aboutMeHeader &&
-              aboutMeHeader.map((aboutTextHeader, index) => (
-                <p className="introText" key={index}>
-                  {aboutTextHeader.body}
-                </p>
-              ))}
-          </div>
-        </section>
+        {/*<section className="intro mt-5">*/}
+        {/*  <div className="container">*/}
+        {/*    <h3 className="header introHeader">O mnie</h3>*/}
+        {/*    {aboutMeHeader &&*/}
+        {/*      aboutMeHeader.map((aboutTextHeader, index) => (*/}
+        {/*        <p className="introText" key={index}>*/}
+        {/*          {aboutTextHeader.body}*/}
+        {/*        </p>*/}
+        {/*      ))}*/}
+        {/*  </div>*/}
+        {/*</section>*/}
+        <IntroductionText fetchName='"Wstep na stronie o mnie"' title="O mnie"/>
         <div className="container">
           <div className="row aboutMe-row">
             <div
