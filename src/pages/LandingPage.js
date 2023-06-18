@@ -1,5 +1,6 @@
 import Hero from "../components/LandingPage/Hero";
 import AboutMediation from "../components/LandingPage/AboutMediation";
+import MainText from "../components/MainText";
 import Offer from "../components/LandingPage/Offer";
 import AboutMe from "../components/LandingPage/AboutMe";
 import { motion } from "framer-motion";

@@ -18,7 +18,7 @@ const AboutMediation = () => {
   }, []);
 
   return (
-    <section className="intro">
+    <section className="intro" id="landing-intro">
       <div className="container">
         <div className="row introRow">
           {landingHeadText &&

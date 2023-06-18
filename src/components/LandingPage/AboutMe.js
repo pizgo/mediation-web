@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
+import Button from "../Button";
 
 const AboutMe = () => {
   const [landingAboutText, setLandingAboutText] = useState(null);
@@ -44,37 +45,29 @@ const AboutMe = () => {
           <div
             className="col-md-6"
             data-aos="fade-right"
-            data-aos-duration="500"
-          >
+            data-aos-duration="500">
             <h2 className="header text-center text-md-start">O mnie</h2>
             <div className="landing-aboutMe-textContainer">
               {landingAboutText &&
                 landingAboutText.map((aboutText, index) => (
-                  <p
-                    className="basic-text landing-aboutMe-text mt-5"
-                    key={index}
-                  >
+                  <p className="basic-text landing-aboutMe-text mt-5"
+                    key={index}>
                     {aboutText.body}
                   </p>
                 ))}
-              <Link className="offer-link link-dark" to="/oferta">
-                <button className="button">Dowiedz się więcej</button>
+              <Link className="offer-link link-dark" to="/omnie">
+                <Button title="Dowiedz się więcej"/>
               </Link>
             </div>
           </div>
-          <div
-            className="col-md-6"
-            data-aos="fade-left"
-            data-aos-duration="500"
-          >
+          <div className="col-md-6" data-aos="fade-left" data-aos-duration="500">
             {landingAboutImg &&
               landingAboutImg.map((img, index) => (
                 <img
                   className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img"
                   key={index}
                   src={img.picture.asset.url}
-                  alt={img.picture.alt}
-                />
+                  alt={img.picture.alt}/>
               ))}
           </div>
         </div>

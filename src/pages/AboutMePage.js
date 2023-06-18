@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../client.js";
 import { motion } from "framer-motion";
+import Button from "../components/Button";
+import {Link} from "react-router-dom";
 
 const AboutMePage = () => {
   const [aboutMeHeader, setAboutMeHeader] = useState(null);
@@ -99,7 +101,9 @@ const AboutMePage = () => {
                     {aboutTextMain.body}
                   </p>
                 ))}
-              <button className="button my-3">Poznaj moją ofertę</button>
+              <Link className="offer-link link-dark" to="/oferta">
+                <Button title="Poznaj moją ofertę"/>
+              </Link>
             </div>
           </div>
         </div>
