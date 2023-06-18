@@ -1,7 +1,7 @@
 .navbar-container {
   position: absolute;
-  top: 3rem;
-  left: 0;
+  top: 5rem;
+  left: 1rem;
   background-color: $white;
   width: 100vw;
 
@@ -41,14 +41,13 @@
         transition: 0.3s all ease-in-out;
       }
       &:hover {
-        letter-spacing: 0.1rem;
-        color: $secondary;
+        color: $lightgold;
       }
       &:hover:before {
         @include media-breakpoint-up(md) {
           left: 0;
           right: 0;
-          border-bottom: 0.1rem solid $secondary;
+          border-bottom: 0.1rem solid $lightgold;
         }
       }
     }
