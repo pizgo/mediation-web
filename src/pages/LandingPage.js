@@ -1,6 +1,6 @@
 import Hero from "../components/LandingPage/Hero";
 import AboutMediation from "../components/LandingPage/AboutMediation";
-import MainText from "../components/MainText";
+import IntroductionText from "../components/IntroductionText";
 import Offer from "../components/LandingPage/Offer";
 import AboutMe from "../components/LandingPage/AboutMe";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ const LandingPage = () => {
         transition={{ ease: "easeOut", duration: 1 }}>
         <Hero />
           <main>
-              <AboutMediation />
+              <AboutMediation/>
               <Offer />
               <AboutMe />
           </main>

@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../client"
 
-const MainText = ({name}) => {
+const IntroductionText = (props) => {
     const [text, setText] = useState(null);
+
+    const textToSend = "Wstep na stronie glownej"
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == "plainText" && title == ${name}]{body}`)
+            .fetch(`*[_type == "plainText" && title == ${textToSend}]{body}`)
             .then((data) => {
                 setText(data);
             })
@@ -25,8 +27,9 @@ const MainText = ({name}) => {
                         ))}
                 </div>
             </div>
+            <h1>{props.text}</h1>
         </section>
     );
 };
 
-export default MainText;
+export default IntroductionText;
