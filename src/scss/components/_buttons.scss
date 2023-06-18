@@ -14,28 +14,7 @@
     padding: 0.7rem 0.7rem
   }
 
-  //&:before {
-  //  content: "";
-  //  border-top: 0.1rem solid $black;
-  //  border-bottom: 0.1rem solid $black;
-  //  display: block;
-  //  position: absolute;
-  //  background: transparent;
-  //  top: 0;
-  //  bottom: 0;
-  //  left: 100%;
-  //  right: 100%;
-  //  transition: 0.3s all ease-in-out;
-  //}
-
   &:hover {
     background: $lightgold;
   }
-
-  //&:hover:before {
-  //  left: 0;
-  //  right: 0;
-  //  border-top: 0.1rem solid $secondary;
-  //  border-bottom: 0.1rem solid $secondary;
-  //}
 }
