@@ -46,7 +46,11 @@
 
 .header {
   font-weight: bold;
-  margin: 1rem 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: 1rem 0;
+    padding-top: 2rem;
+  }
 }
 
 //BASIC TEXT

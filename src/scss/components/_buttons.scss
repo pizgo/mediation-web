@@ -1,6 +1,5 @@
 .button {
-  padding: 0.7rem 0;
-  font-weight: bold;
+  padding: 0.7rem 0.5rem;
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
@@ -8,9 +7,10 @@
   will-change: transform;
   letter-spacing: 0.05rem;
   transition: 0.5s all ease-in-out;
-  background: transparent;
+  background: $primary;
   border: none;
   font-size: 0.8rem;
+  color: white;
 
   @include media-breakpoint-up(lg) {
     padding: 0.7rem 0;
