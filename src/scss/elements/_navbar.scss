@@ -6,14 +6,12 @@
   width: 100vw;
 
   @include media-breakpoint-up(lg) {
-    top: 13px;
-    left: -1rem;
-    background: none;
+    position: static;
   }
 }
 
 .logo {
-  width: 60px;
+  width: 80px;
   cursor: pointer;
 }
 
