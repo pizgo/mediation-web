@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.jpg";
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar bg-white navbar-expand-lg">
         <div className="container">
-          <span className="navbar-brand">LOGO</span>
+          <Link to="/mediation-web">
+            <img src={logo} role="button" className="logo"></img>
+          </Link>
           <button
             className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
             type="button"
@@ -13,23 +16,20 @@ const Navbar = () => {
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span className="toggler-icon top-bar"></span>
             <span className="toggler-icon middle-bar"></span>
             <span className="toggler-icon bottom-bar"></span>
           </button>
           <div
             className="navbar-container collapse navbar-collapse d-lg-flex justify-content-end"
-            id="navbarNav"
-          >
+            id="navbarNav">
             <ul className="navbar-nav menu">
               <li className="nav-item active">
                 <Link
                   className="nav-link nav-link-color"
                   aria-current="page"
-                  to="/mediation-web"
-                >
+                  to="/mediation-web">
                   START
                 </Link>
               </li>
