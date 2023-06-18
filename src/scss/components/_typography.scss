@@ -69,12 +69,13 @@
 
 .footer-text {
   font-size: 0.6rem;
+  color: white;
   display: inline;
   margin: 0 0.5rem;
   padding-bottom: 0.5rem;
 
   @include media-breakpoint-up(md) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -88,6 +89,7 @@
 
 .contactIcon {
   display: inline;
+  color: white;
 }
 
 .contactText {

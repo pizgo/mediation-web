@@ -41,7 +41,7 @@ const Footer = () => {
             <p className="footer-text d-block mx-0">POLITYKA PRYWATNOŚCI</p>
             <p className="footer-text mx-0">2022 © Izabela Kowalska</p>
           </div>
-          <div className="col-7 col-md-6 d-flex flex-column align-items-end ">
+          <div className="col-7 col-md-6 d-flex flex-column align-items-end">
             <div className="">
               <div className="">
                 <FaPhoneAlt className="contactIcon" />
