@@ -1,10 +1,7 @@
 .button {
   padding: 0.7rem 0.5rem;
   text-align: center;
-  display: inline-block;
   text-transform: uppercase;
-  position: relative;
-  will-change: transform;
   letter-spacing: 0.05rem;
   transition: 0.5s all ease-in-out;
   background: $primary;
@@ -13,33 +10,32 @@
   color: white;
 
   @include media-breakpoint-up(lg) {
-    padding: 0.7rem 0;
     font-size: 1rem;
+    padding: 0.7rem 0.7rem
   }
 
-  &:before {
-    content: "";
-    border-top: 0.1rem solid $black;
-    border-bottom: 0.1rem solid $black;
-    display: block;
-    position: absolute;
-    background: transparent;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    right: 100%;
-    transition: 0.3s all ease-in-out;
-  }
+  //&:before {
+  //  content: "";
+  //  border-top: 0.1rem solid $black;
+  //  border-bottom: 0.1rem solid $black;
+  //  display: block;
+  //  position: absolute;
+  //  background: transparent;
+  //  top: 0;
+  //  bottom: 0;
+  //  left: 100%;
+  //  right: 100%;
+  //  transition: 0.3s all ease-in-out;
+  //}
 
   &:hover {
-    letter-spacing: 0.1rem;
-    color: $secondary;
+    background: $lightgold;
   }
 
-  &:hover:before {
-    left: 0;
-    right: 0;
-    border-top: 0.1rem solid $secondary;
-    border-bottom: 0.1rem solid $secondary;
-  }
+  //&:hover:before {
+  //  left: 0;
+  //  right: 0;
+  //  border-top: 0.1rem solid $secondary;
+  //  border-bottom: 0.1rem solid $secondary;
+  //}
 }
