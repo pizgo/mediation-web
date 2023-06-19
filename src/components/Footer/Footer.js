@@ -38,17 +38,16 @@ const Footer = () => {
   const Mail = () => {
     return (
         email && email.map((address, index) => (
-            <a href="mailto:yxz@mail.adress" className="footer-text" key={index}>
+            <a href="mailto:yxz@fakemail.pl" className="footer-text" key={index}>
               {address.body}
             </a>
         ))
     )
   }
 
-  return (
-    <section className="footer">
-      <div className="container">
-          <div className="d-lg-none d-flex flex-column py-3 px-5">
+  const FooterForMobile = () => {
+      return (
+          <div className="d-md-none d-flex flex-column py-3 px-5">
               <div className="d-flex align-items-center pb-2">
                   <FaPhoneAlt className="contactIcon" />
                   <Phone/>
@@ -57,23 +56,38 @@ const Footer = () => {
                   <GrMail className="contactIcon" />
                   <Mail/>
               </div>
-              <p className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</p>
+              <a href="" className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
               <p className="footer-text pb-2" id="copyright">2022 © Izabela Kowalska</p>
           </div>
-          {/*<div className="d-flex flex-row justify-content-between align-items-center py-2 px-2">*/}
-          {/*    <p className="footer-text">POLITYKA PRYWATNOŚCI</p>*/}
-          {/*    <div className="d-flex align-items-center">*/}
-          {/*        <FaPhoneAlt className="contactIcon" />*/}
-          {/*        <Phone/>*/}
-          {/*    </div>*/}
-          {/*</div>*/}
-          {/*<div className="d-flex flex-row justify-content-between align-items-center py-2 px-2">*/}
-          {/*    <p className="footer-text">2022 © Izabela Kowalska</p>*/}
-          {/*    <div className="d-flex align-items-center">*/}
-          {/*        <GrMail className="contactIcon" />*/}
-          {/*        <Mail/>*/}
-          {/*    </div>*/}
-          {/*</div>*/}
+      )
+  };
+
+  const FooterForBiggerScreens = () => {
+      return (
+          <div className="d-none d-md-block py-4">
+              <div className="d-flex flex-row justify-content-between align-items-center py-2 px-2">
+                  <a href="" className="footer-text">POLITYKA PRYWATNOŚCI</a>
+                  <div className="d-flex align-items-center">
+                      <FaPhoneAlt className="contactIcon" />
+                      <Phone/>
+                  </div>
+              </div>
+              <div className="d-flex flex-row justify-content-between align-items-center py-2 px-2">
+                  <p className="footer-text" id="copyright">2022 © Izabela Kowalska</p>
+                  <div className="d-flex align-items-center">
+                      <GrMail className="contactIcon" />
+                      <Mail/>
+                  </div>
+              </div>
+          </div>
+      )
+  };
+
+  return (
+    <section className="footer">
+      <div className="container">
+          <FooterForMobile/>
+          <FooterForBiggerScreens/>
       </div>
     </section>
   );
