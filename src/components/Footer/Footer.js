@@ -28,9 +28,9 @@ const Footer = () => {
   const Phone =  () => {
     return (
         phoneNumber && phoneNumber.map((number, index) => (
-          <p className="footer-text" key={index}>
+          <a href="tel:+48000-000-000" className="footer-text" key={index}>
             {number.body}
-          </p>
+          </a>
          ))
       )
   }
@@ -38,9 +38,9 @@ const Footer = () => {
   const Mail = () => {
     return (
         email && email.map((address, index) => (
-            <p className="footer-text" key={index}>
+            <a href="mailto:yxz@mail.adress" className="footer-text" key={index}>
               {address.body}
-            </p>
+            </a>
         ))
     )
   }
