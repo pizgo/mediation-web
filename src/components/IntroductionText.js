@@ -20,7 +20,7 @@ const IntroductionText = (props) => {
                     <h3 className="header introHeader">{props.title}</h3>
                     {text &&
                         text.map((el, index) => (
-                            <p className="introText" key={index}>
+                            <p className="introText p-4" key={index}>
                                 {el.body}
                             </p>
                         ))}
