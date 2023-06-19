@@ -9,7 +9,7 @@ const AboutMePage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}>
-      <section className="aboutMe-section">
+      <section className="aboutMe-section mt-5">
         <IntroductionText fetchName='"Wstep na stronie o mnie"' title="O mnie"/>
         <AboutMeMainText/>
       </section>
