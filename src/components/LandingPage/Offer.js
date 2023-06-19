@@ -25,7 +25,7 @@ const Offer = () => {
       .catch(console.error);
   }, []);
 
-  const Offer = () => {
+  const OfferCard = () => {
     return (
         <div className="row pt-lg-5 mb-5">
           {landingOfferText &&
@@ -61,7 +61,7 @@ const Offer = () => {
         <div className="row header-row my-5">
           <h3 className="header">Jak mogę ci pomóc?</h3>
         </div>
-        <Offer/>
+        <OfferCard/>
       </div>
     </section>
   );

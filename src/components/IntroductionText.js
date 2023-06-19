@@ -4,9 +4,6 @@ import sanityClient from "../client"
 const IntroductionText = (props) => {
     const [text, setText] = useState(null);
 
-
-    console.log(props.name)
-
     useEffect(() => {
         sanityClient
             .fetch(`*[_type == "plainText" && title == ${props.fetchName}]{body}`)
