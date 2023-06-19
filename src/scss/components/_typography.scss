@@ -77,19 +77,18 @@
   display: inline;
   margin: 0;
 
+  &:hover {
+    color: $lightgold;
+  }
+
   @include media-breakpoint-up(md) {
     font-size: 1rem;
   }
 }
 
-.contactType {
-  margin: 1.5rem 0;
-
-  @include media-breakpoint-up(md) {
-    margin: 2rem 0;
+#copyright {
+  &:hover {
+    color: white;
   }
 }
 
-.contactText {
-  display: inline;
-}

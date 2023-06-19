@@ -1,3 +1,15 @@
 .header-row {
   text-align: center;
 }
+
+.contactType {
+  margin: 1.5rem 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 2rem 0;
+  }
+}
+
+.contactText {
+  display: inline;
+}

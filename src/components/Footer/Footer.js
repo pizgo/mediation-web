@@ -49,16 +49,16 @@ const Footer = () => {
     <section className="footer">
       <div className="container">
           <div className="d-lg-none d-flex flex-column py-3 px-5">
-              <p className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</p>
-              <p className="footer-text pb-4">2022 © Izabela Kowalska</p>
               <div className="d-flex align-items-center pb-2">
                   <FaPhoneAlt className="contactIcon" />
                   <Phone/>
               </div>
-              <div className="d-flex align-items-center pb-2">
+              <div className="d-flex align-items-center pb-4">
                   <GrMail className="contactIcon" />
                   <Mail/>
               </div>
+              <p className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</p>
+              <p className="footer-text pb-2" id="copyright">2022 © Izabela Kowalska</p>
           </div>
           {/*<div className="d-flex flex-row justify-content-between align-items-center py-2 px-2">*/}
           {/*    <p className="footer-text">POLITYKA PRYWATNOŚCI</p>*/}
