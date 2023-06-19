@@ -47,7 +47,7 @@ const Footer = () => {
 
   const FooterForMobile = () => {
       return (
-          <div className="d-md-none d-flex flex-column py-3 px-5">
+          <div className="d-md-none d-flex flex-column py-3 px-4">
               <div className="d-flex align-items-center pb-2">
                   <FaPhoneAlt className="contactIcon" />
                   <Phone/>

@@ -27,7 +27,7 @@ const Offer = () => {
 
   const OfferCard = () => {
     return (
-        <div className="row pt-lg-5 mb-5">
+        <div className="row pt-lg-5">
           {landingOfferText &&
               landingOfferText.map((text, index) => (
                   <div className="col-xxl-4 col-md-6 my-3 col-offer">
@@ -58,10 +58,12 @@ const Offer = () => {
   return (
     <section className="landingPage-offer">
       <div className="container">
-        <div className="row header-row my-5">
-          <h3 className="header">Jak mogę ci pomóc?</h3>
+        <div className="col p-4">
+          <div className="row header-row mb-5 mt-2">
+            <h3 className="header">Jak mogę ci pomóc?</h3>
+          </div>
+          <OfferCard/>
         </div>
-        <OfferCard/>
       </div>
     </section>
   );

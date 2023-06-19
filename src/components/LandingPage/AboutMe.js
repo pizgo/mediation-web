@@ -41,16 +41,15 @@ const AboutMe = () => {
   return (
     <section className="landing-aboutMe">
       <div className="container">
-        <div className="row landing-aboutMe-row">
-          <div
-            className="col-md-6"
+        <div className="row p-4 landing-aboutMe-row">
+          <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">
-            <h2 className="header text-center text-md-start mt-4 mt-md-5">O mnie</h2>
+            <h2 className="header text-center text-md-start mt-md-5">O mnie</h2>
             <div className="landing-aboutMe-textContainer">
               {landingAboutText &&
                 landingAboutText.map((aboutText, index) => (
-                  <p className="basic-text landing-aboutMe-text my-4 my-md-5"
+                  <p className="basic-text my-4 my-md-5"
                     key={index}>
                     {aboutText.body}
                   </p>
