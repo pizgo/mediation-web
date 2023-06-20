@@ -1,12 +1,19 @@
 .accordion {
-  margin: 2.5rem 0;
+  margin: 0;
 
   @include media-breakpoint-up(md) {
+    margin: 2.5rem 0;
     padding: 0 2.5rem;
   }
 }
 
 .accordion-button {
+  font-size: 0.875rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+
   &:not(.collapsed) {
     background: rgba($secondary, 0.75);
     color: white;
@@ -20,3 +27,14 @@
     box-shadow: none;
   }
 }
+
+.accordion-body {
+  font-size: 0.875rem;
+  text-align: justify;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+
+}
+

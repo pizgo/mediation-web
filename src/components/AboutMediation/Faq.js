@@ -15,13 +15,13 @@ const Faq = () => {
 
     return (
         <div className="container">
-            <div className="accordion accordion-flush" id="accordionMediation">
+            <div className="accordion accordion-flush px-4 py-5" id="accordionMediation">
                 {FAQ &&
                     FAQ.map((text, index) => (
                         <div className="accordion-item">
                             <h2 className="accordion-header" id={"heading" + index}>
                                 <button
-                                    className="accordion-button collapsed"
+                                    className="accordion-button collapsed text-basic"
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={"#collapse" + index}
@@ -35,7 +35,7 @@ const Faq = () => {
                                 className="accordion-collapse collapse"
                                 aria-labelledby={"heading" + index}
                                 data-bs-parent="#accordionMediation">
-                                <div className="accordion-body py-4 py-lg-5">{text.body}</div>
+                                <div className="accordion-body text-basic text-justify py-lg-5">{text.body}</div>
                             </div>
                         </div>
                     ))}
