@@ -48,16 +48,15 @@ const ContactForm = () => {
                 </div>
                 <div className="form-check">
                         <label
-                            className="form-check-label ms-3 text-justify"
+                            className="form-check-label"
                             htmlFor="flexCheckDefault">
                             <Field type="checkbox"
                                    name="consent"
                                    className="form-check-input"/>
-                            Zgadzam się na przetwarzanie moich danych osobowych przez
-                            Izabela Kowalska i oświadczam, że zapoznałem/am się z
-                            Polityką Prywatności
+                            <p className="ms-3 text-justify">Zgadzam się na przetwarzanie moich danych osobowych przez
+                                Izabela Kowalska i oświadczam, że zapoznałem/am się z
+                                Polityką Prywatności</p>
                         </label>
-                    <ErrorMessage name="consent"/>
                 </div>
                 <Button title="Wyślij" type="submit"/>
             </Form>
