@@ -6,7 +6,7 @@ export const formSchema = {
     name: "",
     email: "",
     message: "",
-    agreed: "",
+    consent: "",
 }
 
 export const validationSchema =
@@ -22,4 +22,6 @@ export const validationSchema =
             .min(10, 'Wiadomośc jest za krótka')
             .max(2000, 'Wiadomość jest za długa')
             .required('Uzupełnij pole'),
+        consent: Yup.string()
+            .required('Zaznacz zgodę')
     })

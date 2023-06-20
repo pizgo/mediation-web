@@ -1,29 +1,12 @@
-import React, {useState} from 'react';
-import {Field, Form, Formik} from 'formik';
+import React from 'react';
+import {ErrorMessage, Field, Form, Formik} from 'formik';
 import { formSchema, validationSchema } from "../../utils/formData";
-import * as Yuo from "yup"
 import Button from "../Button";
 
 const ContactForm = () => {
 
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setInput((prevInputState) => ({
-    //         ...prevInputState,
-    //         [name]: value,
-    //     }));
-    // };
-    const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     let isAnyError = false;
-    //     if (input.name.length === 0) {
-    //         setNameError("Nie zapomnij o wpisaniu imienia i nazwiska");
-    //     } else {
-    //         setNameError();
-    //     }
-    //     //TODO error email
-    //     //TODO sending form to the email, setting success to "Wiadomość została wysłana. Wkrórtce się z Tobą skontaktuję"
+    const handleSubmit = () => {
+        console.log('wyslano')
     };
     return (
 
@@ -33,45 +16,52 @@ const ContactForm = () => {
             validateOnBlur={true}
             validateOnChange={true}
             onSubmit={async (values, { resetForm }) => {
+                console.log(values)
                 await handleSubmit();
                 resetForm();
             }}>
             <Form>
                 <div className="mb-3">
                     <Field type="text"
+                           id="name"
                            name="name"
                            className="form-control mb-4"
                            placeholder="Imię i nazwisko"/>
+                    <ErrorMessage name="name"/>
                 </div>
                 <div className="mb-3">
-                    <Field type="text"
+                    <Field type="email"
+                           id="email"
                            name="email"
                            className="form-control mb-4"
                            placeholder="Adres e-mail"/>
+                    <ErrorMessage name="email"/>
                 </div>
                 <div className="mb-3">
                     <Field type="text"
+                           id="message"
                            name="message"
                            rows="8"
                            className="form-control mb-4"
                            placeholder="Treść wiadomości"/>
+                    <ErrorMessage name="message"/>
                 </div>
                 <div className="form-check">
-                    <Field type="checkbox"
-                               className="form-check-input"
-                               value=""/>
                         <label
                             className="form-check-label ms-3 text-justify"
                             htmlFor="flexCheckDefault">
+                            <Field type="checkbox"
+                                   name="consent"
+                                   className="form-check-input"/>
                             Zgadzam się na przetwarzanie moich danych osobowych przez
                             Izabela Kowalska i oświadczam, że zapoznałem/am się z
                             Polityką Prywatności
                         </label>
+                    <ErrorMessage name="consent"/>
                 </div>
                 <Button title="Wyślij" type="submit"/>
             </Form>
         </Formik>
-
     );
 };
 
