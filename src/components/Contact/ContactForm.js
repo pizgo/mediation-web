@@ -52,6 +52,7 @@ const ContactForm = () => {
                 <div className="mb-3">
                     <Field type="text"
                            name="message"
+                           rows="8"
                            className="form-control mb-4"
                            placeholder="Treść wiadomości"/>
                 </div>
