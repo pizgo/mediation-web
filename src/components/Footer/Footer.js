@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import ContactData from "../ContactData";
 
 const Footer = () => {
-    
+
   const FooterForMobile = () => {
       return (
           <div className="d-md-none d-flex flex-column py-3 px-4">

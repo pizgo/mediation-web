@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import sanityClient from "../client.js";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import ContactData from "../components/ContactData";
 
 const ContactPage = () => {
   const [input, setInput] = useState({
@@ -12,8 +12,6 @@ const ContactPage = () => {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [success, setSuccess] = useState();
-  const [phoneNumber, setPhoneNumber] = useState(null);
-  const [email, setEmail] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,27 +32,6 @@ const ContactPage = () => {
     //TODO sending form to the email, setting success to "Wiadomość została wysłana. Wkrórtce się z Tobą skontaktuję"
   };
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "contact" && title == "phone number"]{body}`
-      )
-      .then((data) => {
-        setPhoneNumber(data);
-      })
-      .catch(console.error);
-  }, []);
-
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "contact" && title == "email"]{body}`
-      )
-      .then((data) => {
-        setEmail(data);
-      })
-      .catch(console.error);
-  }, []);
 
   return (
     <motion.div
@@ -64,10 +41,10 @@ const ContactPage = () => {
       <section className="contact mt-5">
         <div className="container">
           <div className="row text-center">
-            <h3 className="fw-bold my-md-5">Kontakt</h3>
+            <h3 className="fw-bold py-4 p-md-0 my-md-5">Kontakt</h3>
           </div>
           <div className="row contact-row g-5 p-4 p-md-0">
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 m-0 py-4 py-md-0 ">
               <h5 className="mb-4 mb-md-5 text-md-center">Formularz</h5>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -112,28 +89,16 @@ const ContactPage = () => {
                 </button>
               </form>
             </div>
-            <div className="col-12 col-md-6" mb-5>
+            <div className="col-12 col-md-6 m-0 py-4 py-md-0">
               <h5 className="mb-4 mb-md-5 text-start text-md-center">Dane kontaktowe</h5>
-              <h5 className="fw-bold">Izabela Kowalska</h5>
-              <div className="contactType">
-                <p className="contactText fw-bold">Telefon: </p>
-                {/*<FaPhoneAlt className="contactIcon"/>*/}
-                {phoneNumber &&
-                  phoneNumber.map((number, index) => (
-                    <p className="contactText" key={index}>
-                      {number.body}
-                    </p>
-                  ))}
+              <p className="basic-text fw-bold">Izabela Kowalska</p>
+              <div className="contactType d-flex">
+                <p className="basic-text fw-bold">Telefon: </p>
+                <ContactData fetchName='"phone number"' link="tel:+48000-000-000" style="basic-text ms-2"/>
               </div>
-              <div className="contactType">
-                <p className="contactText fw-bold">Adres email: </p>
-                {/*<GrMail className="contactIcon"/>*/}
-                {email &&
-                  email.map((address, index) => (
-                    <p className="contactText" key={index}>
-                      {address.body}
-                    </p>
-                  ))}
+              <div className="contactType d-flex">
+                <p className="basic-text fw-bold">Adres email: </p>
+                <ContactData fetchName='"email"' link="mailto:yxz@fakemail.pl" style="basic-text ms-2"/>
               </div>
             </div>
           </div>
