@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.2",
+    "formik": "^2.4.2",
     "framer-motion": "^7.6.6",
     "jquery": "^3.6.1",
     "react": "^18.2.0",
@@ -20,7 +21,8 @@
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "sass": "^1.56.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
