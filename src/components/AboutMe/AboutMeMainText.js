@@ -10,10 +10,7 @@ const AboutMeMainText = () => {
     useEffect(() => {
         sanityClient
             .fetch(
-                `*[_type == "plainText" && title == "O mnie glowne"]{
-            body
-        }`
-            )
+                `*[_type == "plainText" && title == "O mnie glowne"]{body}`)
             .then((data) => {
                 setAboutMeMainText(data);
             })
@@ -24,22 +21,23 @@ const AboutMeMainText = () => {
         sanityClient
             .fetch(
                 `*[_type == "picture" && title == "AboutMeImg"]{
-            picture{
-                asset->{
-                _id,
-                url
-                }},
-                alt
-        }`
+                picture{
+                    asset->{
+                    _id,
+                    url
+                    }},
+                    alt
+                }`
             )
             .then((data) => {
                 setAboutMeImg(data);
             })
             .catch(console.error);
     }, []);
+
     return (
         <div className="container">
-            <div className="row aboutMe-row">
+            <div className="row p-4">
                 <div
                     className="col-md-6"
                     data-aos="fade-right"

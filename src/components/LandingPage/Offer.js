@@ -57,7 +57,7 @@ const Offer = () => {
     <section className="landingPage-offer">
       <div className="container px-4">
         <div className="col py-4">
-          <div className="row header-row mb-5 mt-2">
+          <div className="row text-center mb-5 mt-2">
             <h3 className="header">Jak mogę ci pomóc?</h3>
           </div>
           <OfferCard/>

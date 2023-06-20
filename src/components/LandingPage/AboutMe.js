@@ -67,7 +67,7 @@ const AboutMe = () => {
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">
-            <h2 className="header text-center text-md-start mt-md-5">O mnie</h2>
+            <h3 className="header text-center text-md-start mt-md-5">O mnie</h3>
             <div className="landing-aboutMe-textContainer">
               <AboutMeText/>
               <Link className="offer-link link-dark" to="/omnie">
