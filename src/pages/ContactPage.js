@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../client.js";
-import { GrMail } from "react-icons/gr";
-import { FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const ContactPage = () => {
@@ -39,9 +37,7 @@ const ContactPage = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "contact" && title == "phone number"]{
-            body
-        }`
+        `*[_type == "contact" && title == "phone number"]{body}`
       )
       .then((data) => {
         setPhoneNumber(data);
@@ -52,9 +48,7 @@ const ContactPage = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "contact" && title == "email"]{
-            body
-        }`
+        `*[_type == "contact" && title == "email"]{body}`
       )
       .then((data) => {
         setEmail(data);
@@ -66,18 +60,15 @@ const ContactPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 1 }}
-    >
-      <section className="contact">
+      transition={{ ease: "easeOut", duration: 1 }}>
+      <section className="contact mt-5">
         <div className="container">
-          <div className="row text-center my-4">
-            <h3 className="fw-bold my-5">Kontakt</h3>
+          <div className="row text-center">
+            <h3 className="fw-bold my-md-5">Kontakt</h3>
           </div>
-          <div className="row contact-row g-5">
+          <div className="row contact-row g-5 p-4 p-md-0">
             <div className="col-12 col-md-6">
-              <h4 className="mb-4 mb-md-5 text-center">
-                Masz pytanie? Wypełnij formularz
-              </h4>
+              <h5 className="mb-4 mb-md-5 text-md-center">Formularz</h5>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <input
