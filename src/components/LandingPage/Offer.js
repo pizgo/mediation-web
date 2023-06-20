@@ -16,9 +16,7 @@ const Offer = () => {
                     url
                 }},
                 alt,
-                body
-        }`
-      )
+                body}`)
       .then((data) => {
         setLandingOfferText(data);
       })
@@ -52,13 +50,13 @@ const Offer = () => {
                   </div>
               ))}
         </div>
-    )
-  }
+    );
+  };
 
   return (
     <section className="landingPage-offer">
-      <div className="container">
-        <div className="col p-4">
+      <div className="container px-4">
+        <div className="col py-4">
           <div className="row header-row mb-5 mt-2">
             <h3 className="header">Jak mogę ci pomóc?</h3>
           </div>

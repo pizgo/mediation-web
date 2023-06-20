@@ -1,9 +1,10 @@
 //LANDING PAGE HEAD SECTION
-.head-name {
-  font-weight: 400;
+.hero-name {
+  font-weight: bold;
 }
-.head-desc {
+.hero-desc {
   padding-bottom: 0.1rem;
+  margin: 0;
 
   &:last-of-type {
     padding-bottom: 1rem;

@@ -10,10 +10,7 @@ const AboutMe = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "plainText" && title == "O mnie na stronie glownej"]{
-            body
-        }`
-      )
+        `*[_type == "plainText" && title == "O mnie na stronie glownej"]{body}`)
       .then((data) => {
         setLandingAboutText(data);
       })
@@ -23,20 +20,45 @@ const AboutMe = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "picture" && title == "AboutMeLandingPage"]{
-            picture{
-                asset->{
+        `*[_type == "picture" && title == "AboutMeLandingPage"]{picture{asset->{
                 _id,
                 url
                 }},
-                alt
-        }`
-      )
+                alt}`)
       .then((data) => {
         setLandingAboutImg(data);
       })
       .catch(console.error);
   }, []);
+
+  const AboutMeText = () => {
+    return (
+        <>
+          {landingAboutText &&
+              landingAboutText.map((aboutText, index) => (
+                  <p className="basic-text my-4 my-md-5"
+                     key={index}>
+                    {aboutText.body}
+                  </p>
+              ))}
+        </>
+    );
+  };
+
+  const AboutMeImg = () => {
+    return (
+        <div className="d-none d-md-block col-md-6" data-aos="fade-left" data-aos-duration="500">
+          {landingAboutImg &&
+              landingAboutImg.map((img, index) => (
+                  <img
+                      className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img"
+                      key={index}
+                      src={img.picture.asset.url}
+                      alt={img.picture.alt}/>
+              ))}
+        </div>
+    );
+  };
 
   return (
     <section className="landing-aboutMe">
@@ -47,28 +69,13 @@ const AboutMe = () => {
             data-aos-duration="500">
             <h2 className="header text-center text-md-start mt-md-5">O mnie</h2>
             <div className="landing-aboutMe-textContainer">
-              {landingAboutText &&
-                landingAboutText.map((aboutText, index) => (
-                  <p className="basic-text my-4 my-md-5"
-                    key={index}>
-                    {aboutText.body}
-                  </p>
-                ))}
+              <AboutMeText/>
               <Link className="offer-link link-dark" to="/omnie">
                 <Button title="Dowiedz się więcej"/>
               </Link>
             </div>
           </div>
-          <div className="d-none d-md-block col-md-6" data-aos="fade-left" data-aos-duration="500">
-            {landingAboutImg &&
-              landingAboutImg.map((img, index) => (
-                <img
-                  className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img"
-                  key={index}
-                  src={img.picture.asset.url}
-                  alt={img.picture.alt}/>
-              ))}
-          </div>
+          <AboutMeImg/>
         </div>
       </div>
     </section>

@@ -2,29 +2,26 @@ import photoBig from "../../assets/photoBig.png";
 
 const Hero = () => {
   return (
-    <header className="head-section">
-      <div className="container">
+    <header className="hero-section">
         <div className="row pt-2 pt-md-4 pt-lg-5">
           <div className="col-md-7 col-lg-6">
-            <div className="head-img-container d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <img
                 src={photoBig}
                 alt="zdjecie mediatorki Izabeli Kowalskiej"
-                className="img-fluid img-head"/>
+                className="img-fluid img-hero"/>
             </div>
           </div>
           <div
-            className="col-md-5 col-lg-6 pt-3 pt-md-0
-                                       d-flex flex-column justify-content-center">
-            <h2 className="display-4 head-name text-center text-md-start pb-1 pb-md-4">
+            className="col-md-5 col-lg-6 pt-3 pt-md-0 d-flex flex-column justify-content-center">
+            <h3 className="hero-name text-center text-md-start pb-1 pb-md-4">
               Izabela Kowalska
-            </h2>
-            <h3 className="head-desc text-center text-md-start">Mediacje</h3>
-            <h3 className="head-desc text-center text-md-start">Negocjacje</h3>
-            <h3 className="head-desc text-center text-md-start">Rozwiązywanie sporów</h3>
+            </h3>
+            <p className="hero-desc text-center text-md-start">Mediacje</p>
+            <p className="hero-desc text-center text-md-start">Negocjacje</p>
+            <p className="hero-desc text-center text-md-start">Rozwiązywanie sporów</p>
           </div>
         </div>
-      </div>
     </header>
   );
 };
