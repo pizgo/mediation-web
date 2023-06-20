@@ -21,42 +21,45 @@ const ContactForm = () => {
                 resetForm();
             }}>
             <Form>
-                <div className="mb-3">
+                <div className="my-4 position-relative">
                     <Field type="text"
                            id="name"
                            name="name"
                            className="form-control mb-4"
                            placeholder="Imię i nazwisko"/>
-                    <ErrorMessage name="name"/>
+                    <ErrorMessage className="error-text" name="name" component="span"/>
                 </div>
-                <div className="mb-3">
+                <div className="my-4 position-relative">
                     <Field type="email"
                            id="email"
                            name="email"
                            className="form-control mb-4"
                            placeholder="Adres e-mail"/>
-                    <ErrorMessage name="email"/>
+                    <ErrorMessage className="error-text" name="email"component="span"/>
                 </div>
-                <div className="mb-3">
+                <div className="mb-y position-relative">
                     <Field type="text"
                            id="message"
                            name="message"
                            rows="8"
                            className="form-control mb-4"
                            placeholder="Treść wiadomości"/>
-                    <ErrorMessage name="message"/>
+                    <ErrorMessage className="error-text" name="message"component="span"/>
                 </div>
-                <div className="form-check">
+                <div className="position-relative">
+                    <div className="form-check ps-3">
                         <label
                             className="form-check-label"
                             htmlFor="flexCheckDefault">
                             <Field type="checkbox"
                                    name="consent"
                                    className="form-check-input"/>
-                            <p className="ms-3 text-justify">Zgadzam się na przetwarzanie moich danych osobowych przez
+                            <p className="text-justify ms-2">Zgadzam się na przetwarzanie moich danych osobowych przez
                                 Izabela Kowalska i oświadczam, że zapoznałem/am się z
                                 Polityką Prywatności</p>
                         </label>
+                    </div>
+                    <ErrorMessage className="error-consent" name="consent" component="span"/>
                 </div>
                 <Button title="Wyślij" type="submit"/>
             </Form>

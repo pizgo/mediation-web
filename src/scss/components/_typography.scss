@@ -83,5 +83,16 @@
   }
 }
 
+.error-text {
+  color: $red-400;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 2rem;
+}
 
-
+.error-consent {
+  color: $red-400;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 3rem;
+}
