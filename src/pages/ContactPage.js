@@ -71,46 +71,37 @@ const ContactPage = () => {
               <h5 className="mb-4 mb-md-5 text-md-center">Formularz</h5>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <input
-                    onChange={handleChange}
+                  <input onChange={handleChange}
                     type="text"
                     name="name"
                     className="form-control mb-4"
                     value={input.name}
-                    placeholder="Twoje imię i nazwisko"
-                  />
+                    placeholder="Twoje imię i nazwisko"/>
                 </div>
                 <div className="mb-3">
-                  <input
-                    onChange={handleChange}
+                  <input onChange={handleChange}
                     type="email"
                     name="email"
                     className="form-control mb-4"
                     value={input.email}
-                    placeholder="Twój adres e-mail"
-                  />
+                    placeholder="Twój adres e-mail"/>
                 </div>
                 <div className="mb-3">
-                  <textarea
-                    onChange={handleChange}
+                  <textarea onChange={handleChange}
                     name="message"
                     className="form-control"
                     rows="8"
                     value={input.message}
-                    placeholder="Miejsce na Twoją wiadomość"
-                  />
+                    placeholder="Miejsce na Twoją wiadomość"/>
                 </div>
                 <div className="form-check">
-                  <input
-                    onChange={handleChange}
+                  <input onChange={handleChange}
                     type="checkbox"
                     className="form-check-input"
-                    value={input.checkbox}
-                  />
+                    value={input.checkbox}/>
                   <label
-                    className="form-check-label ms-3"
-                    htmlFor="flexCheckDefault"
-                  >
+                    className="form-check-label ms-3 text-justify"
+                    htmlFor="flexCheckDefault">
                     Zgadzam się na przetwarzanie moich danych osobowych przez
                     Izabela Kowalska i oświadczam, że zapoznałem/am się z
                     Polityką Prywatności
@@ -122,7 +113,7 @@ const ContactPage = () => {
               </form>
             </div>
             <div className="col-12 col-md-6" mb-5>
-              <h4 className="mb-4 mb-md-5 text-center">Dane kontaktowe</h4>
+              <h5 className="mb-4 mb-md-5 text-start text-md-center">Dane kontaktowe</h5>
               <h5 className="fw-bold">Izabela Kowalska</h5>
               <div className="contactType">
                 <p className="contactText fw-bold">Telefon: </p>

@@ -35,7 +35,7 @@ const Faq = () => {
                                 className="accordion-collapse collapse"
                                 aria-labelledby={"heading" + index}
                                 data-bs-parent="#accordionMediation">
-                                <div className="accordion-body text-basic text-justify py-lg-5">{text.body}</div>
+                                <div className="accordion-body py-lg-5">{text.body}</div>
                             </div>
                         </div>
                     ))}
