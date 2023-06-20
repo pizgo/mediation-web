@@ -40,11 +40,11 @@ const ContactPage = () => {
       transition={{ ease: "easeOut", duration: 1 }}>
       <section className="contact mt-5">
         <div className="container">
-          <div className="row text-center">
-            <h3 className="fw-bold py-4 p-md-0 my-md-5">Kontakt</h3>
+          <div className="row text-center py-3">
+            <h3 className="fw-bold my-md-5">Kontakt</h3>
           </div>
           <div className="row contact-row g-5 p-4 p-md-0">
-            <div className="col-12 col-md-6 m-0 py-4 py-md-0 ">
+            <div className="col-12 col-md-6 m-0 pt-4 pt-md-0 ">
               <h5 className="mb-4 mb-md-5 text-md-center">Formularz</h5>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
