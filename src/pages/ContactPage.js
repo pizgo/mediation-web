@@ -20,7 +20,7 @@ const ContactPage = () => {
                  <h5 className="mb-4 mb-md-5 text-md-center">Formularz</h5>
                   <ContactForm/>
                </div>
-            <div className="col-md-6 m-0 py-4 py-md-0">
+            <div className="col-md-6 m-0 py-5 py-md-0">
                 <h5 className="mb-4 mb-md-5 text-start text-md-center">Dane kontaktowe</h5>
                 <p className="basic-text fw-bold">Izabela Kowalska</p>
                 <div className="contactType d-flex">
