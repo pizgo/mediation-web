@@ -11,7 +11,7 @@
     max-width: 60%;
   }
   @include media-breakpoint-up(xxl) {
-    max-width: 45%;
+    max-width: 50%;
   }
 }
 
@@ -20,6 +20,6 @@
     padding-left: 4.5rem;
   }
   @include media-breakpoint-up(xxl) {
-    padding-left: 5.5rem;
+    padding-left: 6rem;
   }
 }
