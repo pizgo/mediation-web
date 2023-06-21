@@ -1,10 +1,16 @@
 .img-hero {
-  width: 50%;
+  max-width: 35%;
 
+  @include media-breakpoint-up(sm) {
+    max-width: 70%;
+  }
   @include media-breakpoint-up(md) {
-    width: 70%;
+    max-width: 60%;
   }
   @include media-breakpoint-up(lg) {
-    width: 60%;
+    max-width: 60%;
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: 40%;
   }
 }
