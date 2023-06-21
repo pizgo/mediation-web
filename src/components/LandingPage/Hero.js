@@ -3,7 +3,7 @@ import photoBig from "../../assets/photoBig.png";
 const Hero = () => {
   return (
     <header className="hero-section">
-        <div className="row pt-2 pt-md-4 pt-lg-5">
+      <div className="row pt-2 pt-md-4 pt-lg-5">
           <div className="col-sm-6 ps-5">
             <div className="d-flex justify-content-center">
               <img
