@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <header className="hero-section">
       <div className="row pt-2 pt-md-4 pt-lg-5">
-          <div className="col-sm-6 ps-5">
-            <div className="d-flex justify-content-center">
+          <div className="col-sm-6 ps-lg-5">
+            <div className="hero-imgBox d-flex justify-content-center">
               <img
                 src={photoBig}
                 alt="zdjecie mediatorki Izabeli Kowalskiej"
@@ -14,11 +14,11 @@ const Hero = () => {
           </div>
           <div className="col-sm-6 pt-3 pt-md-0 d-flex flex-column justify-content-center">
             <h3 className="hero-name text-center text-sm-start pb-1 ">
-              Izabela Kowalska
+                <em>Izabela Kowalska</em>
             </h3>
-            <p className="hero-desc text-center text-sm-start">Mediacje</p>
-            <p className="hero-desc text-center text-sm-start">Negocjacje</p>
-            <p className="hero-desc text-center text-sm-start">Rozwiązywanie sporów</p>
+            <p className="hero-desc text-center text-sm-start"><em>Mediacje</em></p>
+            <p className="hero-desc text-center text-sm-start"><em>Negocjacje</em></p>
+            <p className="hero-desc text-center text-sm-start"><em>Rozwiązywanie sporów</em></p>
           </div>
         </div>
     </header>
