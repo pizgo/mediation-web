@@ -27,8 +27,10 @@
 }
 
 a {
-  text-decoration: none;
   color: black;
+  transition: 0.5s all ease-in-out;
+  will-change: transform;
+  text-decoration: none;
 
   &:hover {
     color: $lightgold;
