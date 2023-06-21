@@ -13,20 +13,21 @@ const IntroductionText = (props) => {
             .catch(console.error);
     }, []);
 
+    const styleIntro = !props.title ?  "d-none" : "header introHeader"
+
     return (
         <section className="intro">
             <div className="container">
                 <div className="row introRow">
-                    <h3 className="header introHeader">{props.title}</h3>
+                    <h3 className={styleIntro}>{props.title}</h3>
                     {text &&
                         text.map((el, index) => (
-                            <p className="introText p-4" key={index}>
+                            <p className="introText py-4" key={index}>
                                 {el.body}
                             </p>
                         ))}
                 </div>
             </div>
-            <h1>{props.text}</h1>
         </section>
     );
 };

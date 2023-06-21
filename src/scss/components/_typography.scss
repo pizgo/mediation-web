@@ -61,6 +61,11 @@
   text-align: center;
   font-size: 0.875rem;
 
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
   @include media-breakpoint-up(lg) {
     padding: 2rem 0;
     font-size: 1.2rem;
