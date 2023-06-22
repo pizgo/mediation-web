@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, ErrorMessage} from "formik";
 
 const InputText = (props) => (
-    <div className="input-container">
+    <div className="mb-4">
         <Field type="text"
                id={props.id}
                name={props.name}

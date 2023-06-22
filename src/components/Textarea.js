@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, ErrorMessage} from "formik";
 
 const Textarea = (props) => (
-    <div className="input-container">
+    <div className="mb-4">
         <Field type="text"
                component={props.component}
                rows={props.rows}

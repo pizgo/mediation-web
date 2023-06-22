@@ -120,6 +120,28 @@
 
 //CONTACT & FOOTER
 
+.header-small {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+//fw-bold mb-4 mb-lg-5 text-lg-center
+
+.error-text {
+  color: $red-400;
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(sm) {
+    font-weight: bold;
+  }
+}
+
+
 .footer-text {
   font-size: 0.875rem;
   color: white;
@@ -131,24 +153,4 @@
   }
 }
 
-.error-text {
-  color: $red-400;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 2.2rem;
 
-  @include media-breakpoint-up(sm) {
-    font-weight: bold;
-  }
-}
-
-.error-consent {
-  color: $red-400;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 3.8rem;
-
-  @include media-breakpoint-up(sm) {
-    font-weight: bold;
-  }
-}
