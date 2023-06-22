@@ -62,12 +62,12 @@ const AboutMe = () => {
 
   return (
     <section className="landing-aboutMe">
-      <div className="container">
-        <div className="row p-4 landing-aboutMe-row">
+      <div className="container p-4 py-xxl-5">
+        <div className="row section-row mb-0 landing-aboutMe-row">
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">
-            <h3 className="header text-center text-md-start mt-md-5">O mnie</h3>
+            <h3 className="header text-center text-md-start">O mnie</h3>
             <div className="landing-aboutMe-textContainer">
               <AboutMeText/>
               <Link className="offer-link link-dark" to="/omnie">

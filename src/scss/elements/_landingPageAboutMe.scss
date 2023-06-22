@@ -1,11 +1,12 @@
 .landing-aboutMe {
   background-color: $lightgrey;
 
-  &-row {
-    //padding: 6% 2.5rem;
-  }
 
   &-img {
     width: 70%;
+
+    @include media-breakpoint-up(xl) {
+      width: 65%;
+    }
   }
 }

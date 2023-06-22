@@ -8,7 +8,8 @@
   height: 0.875rem;
   margin-right: 0.4rem;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(xl) {
+    height: 2rem;
     margin-right: 0.6rem;
   }
 }
