@@ -3,6 +3,7 @@ import {ErrorMessage, Field, Form, Formik} from 'formik';
 import { formSchema, validationSchema } from "../../utils/formData";
 import Button from "../Button";
 import InputText from "../InputText";
+import Textarea from "../Textarea";
 
 const ContactForm = () => {
 
@@ -24,7 +25,7 @@ const ContactForm = () => {
             <Form>
                 <InputText id="name" name="name" placeholder="Imię i nazwisko"/>
                 <InputText type="text" id="email" name="email" placeholder="Adres e-mail"/>
-                <InputText id="message" name="message" placeholder="Treść wiadomości"/>
+                <Textarea as="textarea" component="textarea" rows="8" id="message" name="message" placeholder="Treść wiadomości"/>
                 <div className="position-relative">
                     <div className="form-check ps-3">
                         <label

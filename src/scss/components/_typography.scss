@@ -112,6 +112,10 @@
 
 .form-check-label {
   font-size: 0.7rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 0.8rem;
+  }
 }
 
 //CONTACT & FOOTER
@@ -132,6 +136,10 @@
   font-size: 0.8rem;
   position: absolute;
   top: 2.2rem;
+
+  @include media-breakpoint-up(sm) {
+    font-weight: bold;
+  }
 }
 
 .error-consent {
@@ -139,4 +147,8 @@
   font-size: 0.8rem;
   position: absolute;
   top: 3.8rem;
+
+  @include media-breakpoint-up(sm) {
+    font-weight: bold;
+  }
 }
