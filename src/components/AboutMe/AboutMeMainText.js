@@ -36,17 +36,17 @@ const AboutMeMainText = () => {
     }, []);
 
     return (
-        <div className="container">
-            <div className="row p-4">
+        <div className="container p-4 py-xxl-5">
+            <div className="row section-row mb-0">
                 <div
-                    className="col-md-6"
+                    className="col-lg-6"
                     data-aos="fade-right"
                     data-aos-duration="500">
                     <div>
                         {aboutMeImg &&
                             aboutMeImg.map((img, index) => (
                                 <img
-                                    className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-start landing-aboutMe-img"
+                                    className="img-fluid img-thumbnail mx-auto d-block mx-lg-0 float-lg-start landing-aboutMe-img"
                                     key={index}
                                     src={img.picture.asset.url}
                                     alt={img.picture.alt}
@@ -55,7 +55,7 @@ const AboutMeMainText = () => {
                     </div>
                 </div>
                 <div
-                    className="col-md-6 mt-5 mt-md-0"
+                    className="col-lg-6 mt-5 mt-lg-0"
                     data-aos="fade-left"
                     data-aos-duration="500">
                     {aboutMeMainText &&

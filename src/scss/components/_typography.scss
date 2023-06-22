@@ -96,11 +96,6 @@
 
 .header {
   font-weight: bold;
-
-  //@include media-breakpoint-up(lg) {
-  //  margin: 1rem 0;
-  //  padding-top: 2rem;
-  //}
 }
 
 //BASIC TEXT
@@ -108,7 +103,7 @@
   text-align: justify;
   font-size: 0.875rem;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     font-size: 1rem;
   }
 }
