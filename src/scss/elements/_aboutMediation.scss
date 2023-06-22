@@ -10,7 +10,7 @@
 .accordion-button {
   font-size: 0.875rem;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     font-size: 1rem;
   }
 
@@ -32,7 +32,7 @@
   font-size: 0.875rem;
   text-align: justify;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     font-size: 1rem;
   }
 

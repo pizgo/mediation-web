@@ -14,8 +14,8 @@ const Faq = () => {
     }, []);
 
     return (
-        <div className="container">
-            <div className="accordion accordion-flush px-4 py-5" id="accordionMediation">
+        <div className="container p-4 py-xxl-5">
+            <div className="accordion accordion-flush" id="accordionMediation">
                 {FAQ &&
                     FAQ.map((text, index) => (
                         <div className="accordion-item">
