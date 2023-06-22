@@ -25,13 +25,13 @@ const Offer = () => {
 
   const OfferCard = () => {
     return (
-        <div className="row pt-lg-5">
+        <div className="row">
           {landingOfferText &&
               landingOfferText.map((text, index) => (
-                  <div className="col-xxl-4 col-md-6 my-3 col-offer">
+                  <div className="col-xl-4 col-md-6 my-3 col-offer">
                     <Link className="offer-link link-dark" to="/oferta">
                       <div
-                          className="card offer-card px-3 pt-4 mb-4 mb-md-5 position-relative"
+                          className="card offer-card px-3 pt-4 mb-4 mb-md-4 position-relative"
                           data-aos="fade-up"
                           data-aos-duration="500">
                     <span key={index}>
@@ -55,9 +55,9 @@ const Offer = () => {
 
   return (
     <section className="landingPage-offer">
-      <div className="container px-4">
-        <div className="col py-4">
-          <div className="row text-center mb-5 mt-2">
+      <div className="container p-4">
+        <div className="col">
+          <div className="row header-row text-center">
             <h3 className="header">Jak mogę ci pomóc?</h3>
           </div>
           <OfferCard/>

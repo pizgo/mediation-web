@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.header-row {
+  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 3.6rem;
+    margin-top: 1.6rem;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+
+}
+
+
 //.contactType {
 //  margin: 1.5rem 0;
 //
