@@ -5,7 +5,7 @@ import { emailLink, emailToFetch, phoneLink, phoneNumberToFetch } from "../../ut
 
 const Footer = () => {
 
-  const classForContactDataFooter = "footer-text"
+  const classForContactDataFooter = "footerText"
 
   const FooterForMobile = () => {
       return (
@@ -18,8 +18,8 @@ const Footer = () => {
                   <GrMail className="contactIcon" />
                   <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
               </div>
-              <a href="" className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
-              <p className="footer-text pb-2" id="copyright">2022 © Izabela Kowalska</p>
+              <a href="" className="footerText pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
+              <p className="footerText pb-2" id="copyright">2022 © Izabela Kowalska</p>
           </div>
       )
   };
@@ -28,14 +28,14 @@ const Footer = () => {
       return (
           <div className="d-none d-md-block py-4 py-lg-2">
               <div className="d-flex flex-row justify-content-between align-items-center p-2 p-lg-1">
-                  <a href="" className="footer-text">POLITYKA PRYWATNOŚCI</a>
+                  <a href="" className="footerText">POLITYKA PRYWATNOŚCI</a>
                   <div className="d-flex align-items-center">
                       <FaPhoneAlt className="contactIcon" />
                       <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactDataFooter}/>
                   </div>
               </div>
               <div className="d-flex flex-row justify-content-between align-items-center p-2 p-lg-1">
-                  <p className="footer-text" id="copyright">2022 © Izabela Kowalska</p>
+                  <p className="footerText" id="copyright">2022 © Izabela Kowalska</p>
                   <div className="d-flex align-items-center">
                       <GrMail className="contactIcon" />
                       <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
@@ -46,7 +46,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="footer">
+    <section className="footer bg-primary">
       <div className="container">
           <FooterForMobile/>
           <FooterForBiggerScreens/>

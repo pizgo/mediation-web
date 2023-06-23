@@ -8,11 +8,6 @@
 }
 
 .accordion-button {
-  font-size: 0.875rem;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1rem;
-  }
 
   &:not(.collapsed) {
     background: rgba($secondary, 0.75);

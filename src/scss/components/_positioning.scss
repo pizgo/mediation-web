@@ -13,5 +13,11 @@
   }
 }
 
+.aboutMe-img {
+  width: 70%;
 
+  @include media-breakpoint-up(xl) {
+    width: 65%;
+  }
+}
 

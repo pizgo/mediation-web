@@ -1,62 +1,66 @@
-.introHeader {
-  text-align: center;
-  color: white;
-  margin: 0 !important;
-  padding-top: 1rem;
+.text {
 
-  @include media-breakpoint-up(lg) {
-    padding-top: 2rem;
+  &-intro {
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 0.875rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 1rem 0;
+      font-size: 1rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 2rem 0;
+      font-size: 1.2rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 3rem 0;
+      font-size: 1.3rem;
+    }
   }
-}
 
-.introText {
-  color: white;
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 0.875rem;
+  &-basic {
+    text-align: justify;
+    font-size: 0.875rem;
 
-  @include media-breakpoint-up(sm) {
-    padding: 1rem 0;
-    font-size: 1rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    padding: 1rem 0;
-    font-size: 1.1rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 2rem 0;
-    font-size: 1.2rem;
-  }
-  @include media-breakpoint-up(xxl) {
-    padding: 3rem 0;
-    font-size: 1.3rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+    }
   }
 }
 
 .header {
-  font-weight: bold;
-}
 
-.basicText {
-  text-align: justify;
-  font-size: 0.875rem;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1rem;
-  }
-}
-
-.headerSmall {
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 3rem;
+  &-intro {
     text-align: center;
+    color: white;
+    margin: 0 !important;
+    padding-top: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 2rem;
+    }
+  }
+
+  &-contact {
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
   }
 }
+
+//potem się upewnić, że zmienilam wszędzie konwencję nazwynia klas
+//upewnić się, że każda sekcja ma swoją klasę wskazującą na to, czego dotyczy
 
 
 

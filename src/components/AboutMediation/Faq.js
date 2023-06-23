@@ -21,7 +21,7 @@ const Faq = () => {
                         <div className="accordion-item">
                             <h2 className="accordion-header" id={"heading" + index}>
                                 <button
-                                    className="accordion-button collapsed basicText"
+                                    className="accordion-button collapsed text-basic"
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={"#collapse" + index}
@@ -35,7 +35,7 @@ const Faq = () => {
                                 className="accordion-collapse collapse"
                                 aria-labelledby={"heading" + index}
                                 data-bs-parent="#accordionMediation">
-                                <div className="accordion-body basicText py-lg-5">{text.body}</div>
+                                <div className="accordion-body text-basic py-lg-5">{text.body}</div>
                             </div>
                         </div>
                     ))}

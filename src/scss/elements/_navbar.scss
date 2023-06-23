@@ -44,14 +44,6 @@
   }
 }
 
-.nav-link {
-  font-size: 0.875rem;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1rem;
-  }
-}
-
 .navbar-toggler {
   border: none;
   color: transparent;

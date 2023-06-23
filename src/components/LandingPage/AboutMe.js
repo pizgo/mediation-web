@@ -37,7 +37,7 @@ const AboutMe = () => {
         <>
           {landingAboutMeText &&
               landingAboutMeText.map((aboutText, index) => (
-                  <p className="basicText my-4 my-md-5"
+                  <p className="text-basic my-4 my-md-5"
                      key={index}>
                     {aboutText.body}
                   </p>
@@ -52,7 +52,7 @@ const AboutMe = () => {
           {landingAboutMeImg &&
               landingAboutMeImg.map((img, index) => (
                   <img
-                      className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img"
+                      className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end aboutMe-img"
                       key={index}
                       src={img.picture.asset.url}
                       alt={img.picture.alt}/>
@@ -62,13 +62,13 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="landing-aboutMe">
+    <section className="landingAboutMe ">
       <div className="container p-4 py-xxl-5">
         <div className="row sectionRow mb-0 landing-aboutMe-row">
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">
-            <h3 className="header text-center text-md-start">O mnie</h3>
+            <h3 className="text-center text-md-start">O mnie</h3>
             <div className="landing-aboutMe-textContainer">
               <AboutMeText/>
               <Link className="offer-link link-dark" to="/omnie">

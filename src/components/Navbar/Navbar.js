@@ -43,7 +43,7 @@ const Navbar = () => {
                 <ul className="navbar-nav menu">
                   <li className="nav-item active">
                     <Link
-                        className="nav-link nav-link-color"
+                        className="nav-link text-basic nav-link-color"
                         aria-current="page"
                         to="/mediation-web"
                         onClick={handleClickTrue}>
@@ -51,22 +51,22 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/omnie" onClick={handleClickTrue}>
+                    <Link className="nav-link text-basic" to="/omnie" onClick={handleClickTrue}>
                       O MNIE
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/omediacjach" onClick={handleClickTrue}>
+                    <Link className="nav-link text-basic" to="/omediacjach" onClick={handleClickTrue}>
                       O MEDIACJACH
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/oferta" onClick={handleClickTrue}>
+                    <Link className="nav-link text-basic" to="/oferta" onClick={handleClickTrue}>
                       OFERTA
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/kontakt" onClick={handleClickTrue}>
+                    <Link className="nav-link text-basic" to="/kontakt" onClick={handleClickTrue}>
                       KONTAKT
                     </Link>
                   </li>

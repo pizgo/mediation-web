@@ -1,42 +1,38 @@
-.col-offer {
-}
+.offer {
 
-.img-offer {
-  width: 2.4rem;
-  height: 2.4rem;
+  &-card {
+    box-shadow: $shadow;
 
-  @include media-breakpoint-up(xl) {
-    width: 2.8rem;
-    height: 2.8rem;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $shadowHover;
+    }
   }
 
-  @include media-breakpoint-up(xxl) {
-    width: 3rem;
-    height: 3rem;
+  &-img {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @include media-breakpoint-up(xl) {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
-}
 
-.img-background {
-  background-color: $secondary;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  &-imgBackground  {
+    background-color: $secondary;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
 
-  @include media-breakpoint-up(xxl) {
-    height: 92px;
-    width: 92px;
-  }
-}
-
-.offer-link {
-  text-decoration: none;
-}
-
-.offer-card {
-  box-shadow: $shadow;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: $shadowHover;
+    @include media-breakpoint-up(xxl) {
+      height: 92px;
+      width: 92px;
+    }
   }
 }

@@ -1,72 +1,76 @@
-.img-hero {
-  max-width: 35%;
+.hero {
 
-  @include media-breakpoint-up(sm) {
-    max-width: 70%;
-  }
-  @include media-breakpoint-up(md) {
-    max-width: 60%;
-  }
-  @include media-breakpoint-up(lg) {
-    max-width: 60%;
-  }
-  @include media-breakpoint-up(xxl) {
-    max-width: 45%;
-  }
-}
-
-.hero-imgBox {
-  @include media-breakpoint-up(xl) {
-    padding-left: 4.5rem;
-  }
-  @include media-breakpoint-up(xxl) {
-    padding-left: 6rem;
-  }
-}
-
-.heroName {
-  font-weight: 400;
-  line-height: 1.2;
-  color: $primary;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1.6rem;
-  }
-  @include media-breakpoint-up(md) {
-    font-size: 1.8rem;
-  }
-  @include media-breakpoint-up(lg) {
-    font-size: 2rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.5rem;
-  }
-  @include media-breakpoint-up(xxl) {
-    font-size: 2.7rem;
-  }
-}
-.heroDesc {
-  padding-bottom: 0.1rem;
-  margin: 0;
-
-  &:last-of-type {
-    padding-bottom: 1rem;
-  }
-  @include media-breakpoint-up(sm) {
-    font-size: 1.2rem;
+  &-imgBox {
+    @include media-breakpoint-up(xl) {
+      padding-left: 4.5rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding-left: 6rem;
+    }
   }
 
-  @include media-breakpoint-up(md) {
-    font-size: 1.4rem;
-    padding-bottom: 0.7rem;
+  &-img {
+    max-width: 35%;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 70%;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 60%;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 60%;
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 45%;
+    }
   }
-  @include media-breakpoint-up(lg) {
-    font-size: 1.6rem;
+
+  &-name {
+    font-weight: 400;
+    line-height: 1.2;
+    color: $primary;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.6rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 1.8rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.5rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 2.7rem;
+    }
   }
-  @include media-breakpoint-up(xl) {
-    font-size: 2rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.2rem;
+
+  &-desc {
+    padding-bottom: 0.1rem;
+    margin: 0;
+
+    &:last-of-type {
+      padding-bottom: 1rem;
+    }
+    @include media-breakpoint-up(sm) {
+      font-size: 1.2rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.4rem;
+      padding-bottom: 0.7rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.6rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.2rem;
+    }
   }
 }
