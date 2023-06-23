@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import sanityClient from "../client";
 
 const ContactData = (props) => {
@@ -16,7 +16,7 @@ const ContactData = (props) => {
     return (
         <>
             {contactText && contactText.map((el, index) => (
-            <a href={props.link} className={props.style} key={el.index}>
+            <a href={props.link} className={props.class} key={el.index}>
                 {el.body}
             </a>
         ))}

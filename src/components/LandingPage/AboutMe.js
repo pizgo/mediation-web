@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import {aboutMeLandingPage, aboutMeLandingPageImg} from "../../utils/consts";
+import { aboutMeLandingPage, aboutMeLandingPageImg } from "../../utils/consts";
 
 const AboutMe = () => {
-  const [landingAboutText, setLandingAboutText] = useState(null);
-  const [landingAboutImg, setLandingAboutImg] = useState(null);
+  const [landingAboutMeText, setLandingAboutMeText] = useState(null);
+  const [landingAboutMeImg, setLandingAboutMeImg] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
         `*[_type == "plainText" && title == ${aboutMeLandingPage}]{body}`)
       .then((data) => {
-        setLandingAboutText(data);
+        setLandingAboutMeText(data);
       })
       .catch(console.error);
   }, []);
@@ -27,7 +27,7 @@ const AboutMe = () => {
                 }},
                 alt}`)
       .then((data) => {
-        setLandingAboutImg(data);
+        setLandingAboutMeImg(data);
       })
       .catch(console.error);
   }, []);
@@ -35,8 +35,8 @@ const AboutMe = () => {
   const AboutMeText = () => {
     return (
         <>
-          {landingAboutText &&
-              landingAboutText.map((aboutText, index) => (
+          {landingAboutMeText &&
+              landingAboutMeText.map((aboutText, index) => (
                   <p className="basic-text my-4 my-md-5"
                      key={index}>
                     {aboutText.body}
@@ -49,8 +49,8 @@ const AboutMe = () => {
   const AboutMeImg = () => {
     return (
         <div className="d-none d-md-block col-md-6" data-aos="fade-left" data-aos-duration="500">
-          {landingAboutImg &&
-              landingAboutImg.map((img, index) => (
+          {landingAboutMeImg &&
+              landingAboutMeImg.map((img, index) => (
                   <img
                       className="img-fluid img-thumbnail mx-auto d-block mx-md-0 float-md-end landing-aboutMe-img"
                       key={index}

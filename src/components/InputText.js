@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, ErrorMessage} from "formik";
+import { Field, ErrorMessage } from "formik";
 
 const InputText = (props) => (
     <div className="mb-4">
@@ -7,8 +7,7 @@ const InputText = (props) => (
                id={props.id}
                name={props.name}
                className="form-control"
-               placeholder={props.placeholder}
-               />
+               placeholder={props.placeholder}/>
         <ErrorMessage className="error-text" name={props.name} component="span"/>
     </div>
 );

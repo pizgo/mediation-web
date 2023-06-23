@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import IntroductionText from "../components/IntroductionText";
 import AboutMeMainText from "../components/AboutMe/AboutMeMainText";
-import {introTextAboutMePage, titleAboutMePage} from "../utils/consts";
+import { introTextAboutMePage, titleAboutMePage } from "../utils/consts";
 
 const AboutMePage = () => {
 

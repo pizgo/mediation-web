@@ -9,9 +9,5 @@ export const phoneNumberToFetch = '"phone number"';
 export const emailToFetch = '"email"';
 export const phoneLink = "tel:+48000-000-000";
 export const emailLink = "mailto:yxz@fakemail.pl";
-
-
-
-
 export const titleAboutMediationPage = "Dlaczego warto zaufać mediacji?";
 export const titleAboutMePage = "O mnie";

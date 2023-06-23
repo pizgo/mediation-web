@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import IntroductionText from "../components/IntroductionText";
 import Faq from "../components/AboutMediation/Faq";
-import {introTextAboutMediationPage, titleAboutMediationPage} from "../utils/consts";
+import { introTextAboutMediationPage, titleAboutMediationPage } from "../utils/consts";
 
 const AboutMediationPage = () => {
 

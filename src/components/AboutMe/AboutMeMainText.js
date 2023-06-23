@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import sanityClient from "../../client";
-import {aboutMePageImg, mainTextAboutMePage} from "../../utils/consts";
+import { aboutMePageImg, mainTextAboutMePage } from "../../utils/consts";
 
 const AboutMeMainText = () => {
     const [aboutMeMainText, setAboutMeMainText] = useState(null);
@@ -46,12 +46,10 @@ const AboutMeMainText = () => {
                     <div>
                         {aboutMeImg &&
                             aboutMeImg.map((img, index) => (
-                                <img
-                                    className="img-fluid img-thumbnail mx-auto d-block mx-lg-0 float-lg-start landing-aboutMe-img"
+                                <img className="img-fluid img-thumbnail mx-auto d-block mx-lg-0 float-lg-start landing-aboutMe-img"
                                     key={index}
                                     src={img.picture.asset.url}
-                                    alt={img.picture.alt}
-                                />
+                                    alt={img.picture.alt}/>
                             ))}
                     </div>
                 </div>
@@ -61,9 +59,7 @@ const AboutMeMainText = () => {
                     data-aos-duration="500">
                     {aboutMeMainText &&
                         aboutMeMainText.map((aboutTextMain, index) => (
-                            <p className="basic-text" key={index}>
-                                {aboutTextMain.body}
-                            </p>
+                            <p className="basic-text" key={index}>{aboutTextMain.body}</p>
                         ))}
                     <Link className="offer-link link-dark" to="/oferta">
                         <Button title="Poznaj moją ofertę"/>

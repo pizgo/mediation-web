@@ -8,10 +8,10 @@ const Navbar = () => {
 
   const handleClickTrue = () => {
     setIsClicked(true)
-  }
+  };
   const handleClickFalse = () => {
     setIsClicked(false)
-  }
+  };
 
   const styles = isClicked  ?
       "navbar-container collapse navbar-collapse d-none d-lg-block d-lg-flex justify-content-end" :
@@ -32,8 +32,7 @@ const Navbar = () => {
                   aria-controls="navbarNav"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={handleClickFalse}
-              >
+                  onClick={handleClickFalse}>
                 <span className="toggler-icon top-bar"></span>
                 <span className="toggler-icon middle-bar"></span>
                 <span className="toggler-icon bottom-bar"></span>
@@ -76,7 +75,7 @@ const Navbar = () => {
             </div>
           </nav>
         </>
-        )
+    )
 };
 
 export default Navbar;

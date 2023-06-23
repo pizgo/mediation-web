@@ -1,20 +1,22 @@
 import { GrMail } from "react-icons/gr";
 import { FaPhoneAlt } from "react-icons/fa";
 import ContactData from "../ContactData";
-import {emailLink, emailToFetch, phoneLink, phoneNumberToFetch} from "../../utils/consts";
+import { emailLink, emailToFetch, phoneLink, phoneNumberToFetch } from "../../utils/consts";
 
 const Footer = () => {
+
+  const classForContactDataFooter = "footer-text"
 
   const FooterForMobile = () => {
       return (
           <div className="d-md-none d-flex flex-column py-3 px-4">
               <div className="d-flex align-items-center pb-2">
-                  <FaPhoneAlt className="contactIcon" />
-                  <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} style="footer-text"/>
+                  <FaPhoneAlt className="contactIcon"/>
+                  <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactDataFooter}/>
               </div>
               <div className="d-flex align-items-center pb-4">
                   <GrMail className="contactIcon" />
-                  <ContactData fetchTitle={emailToFetch} link={emailLink} style="footer-text"/>
+                  <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
               </div>
               <a href="" className="footer-text pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
               <p className="footer-text pb-2" id="copyright">2022 © Izabela Kowalska</p>
@@ -29,14 +31,14 @@ const Footer = () => {
                   <a href="" className="footer-text">POLITYKA PRYWATNOŚCI</a>
                   <div className="d-flex align-items-center">
                       <FaPhoneAlt className="contactIcon" />
-                      <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} style="footer-text"/>
+                      <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactDataFooter}/>
                   </div>
               </div>
               <div className="d-flex flex-row justify-content-between align-items-center p-2 p-lg-1">
                   <p className="footer-text" id="copyright">2022 © Izabela Kowalska</p>
                   <div className="d-flex align-items-center">
                       <GrMail className="contactIcon" />
-                      <ContactData fetchTitle={emailToFetch} link={emailLink} style="footer-text"/>
+                      <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
                   </div>
               </div>
           </div>

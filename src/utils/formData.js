@@ -24,4 +24,4 @@ export const validationSchema =
             .required('Uzupełnij pole'),
         consent: Yup.string()
             .required('Zaznacz zgodę')
-    })
+    });
