@@ -17,13 +17,13 @@ const ContactPage = () => {
             </div>
             <div className="row section-row mb-3">
                <div className="col-lg-6">
-                 <h5 className="header-small">Formularz</h5>
+                 <h4 className="header-small">Formularz</h4>
                   <ContactForm/>
                </div>
-            <div className="col-lg-6 py-4 py-lg-0">
-                <h5 className="header-small">Dane kontaktowe:</h5>
-                <p className="basic-text fw-bold">Izabela Kowalska</p>
-                <div className="contactType d-flex">
+            <div className="col-lg-6 py-4 py-lg-0 ps-lg-5">
+                <h4 className="header-small">Dane kontaktowe:</h4>
+                <h5 className="header-small mb-lg-4 text-lg-start">Izabela Kowalska</h5>
+                <div className="contactType d-flex mb-lg-3">
                     <p className="basic-text fw-bold">Telefon: </p>
                     <ContactData fetchName='"phone number"' link="tel:+48000-000-000" style="basic-text ms-2"/>
                </div>
