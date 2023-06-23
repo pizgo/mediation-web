@@ -34,6 +34,17 @@
       font-size: 1rem;
     }
   }
+
+  &-footer {
+    font-size: 0.875rem;
+    color: white;
+    display: inline;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+    }
+  }
 }
 
 .header {
@@ -59,8 +70,6 @@
   }
 }
 
-//potem się upewnić, że zmienilam wszędzie konwencję nazwynia klas
-//upewnić się, że każda sekcja ma swoją klasę wskazującą na to, czego dotyczy
 
 
 

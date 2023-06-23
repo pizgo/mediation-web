@@ -57,7 +57,7 @@ const Offer = () => {
     <section className="landingPage-offer">
       <div className="container p-4 py-xxl-5">
         <div className="col">
-          <div className="row sectionRow text-center">
+          <div className="row row-position text-center">
             <h3 className="">Jak mogę ci pomóc?</h3>
           </div>
           <OfferCard/>

@@ -38,7 +38,7 @@ const AboutMeMainText = () => {
 
     return (
         <div className="container p-4 py-xxl-5">
-            <div className="row sectionRow mb-0">
+            <div className="row row-position mb-0">
                 <div
                     className="col-lg-6"
                     data-aos="fade-right"

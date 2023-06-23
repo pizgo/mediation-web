@@ -5,21 +5,21 @@ import { emailLink, emailToFetch, phoneLink, phoneNumberToFetch } from "../../ut
 
 const Footer = () => {
 
-  const classForContactDataFooter = "footerText"
+  const classForContactDataFooter = "text-footer"
 
   const FooterForMobile = () => {
       return (
           <div className="d-md-none d-flex flex-column py-3 px-4">
               <div className="d-flex align-items-center pb-2">
-                  <FaPhoneAlt className="contactIcon"/>
+                  <FaPhoneAlt className="footer-icon"/>
                   <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactDataFooter}/>
               </div>
               <div className="d-flex align-items-center pb-4">
-                  <GrMail className="contactIcon" />
+                  <GrMail className="footer-icon" />
                   <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
               </div>
-              <a href="" className="footerText pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
-              <p className="footerText pb-2" id="copyright">2022 © Izabela Kowalska</p>
+              <a href="" className="text-footer pb-2" role="button">POLITYKA PRYWATNOŚCI</a>
+              <p className="text-footer pb-2" id="copyright">2022 © Izabela Kowalska</p>
           </div>
       )
   };
@@ -28,16 +28,16 @@ const Footer = () => {
       return (
           <div className="d-none d-md-block py-4 py-lg-2">
               <div className="d-flex flex-row justify-content-between align-items-center p-2 p-lg-1">
-                  <a href="" className="footerText">POLITYKA PRYWATNOŚCI</a>
+                  <a href="" className="text-footer">POLITYKA PRYWATNOŚCI</a>
                   <div className="d-flex align-items-center">
-                      <FaPhoneAlt className="contactIcon" />
+                      <FaPhoneAlt className="footer-icon" />
                       <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactDataFooter}/>
                   </div>
               </div>
               <div className="d-flex flex-row justify-content-between align-items-center p-2 p-lg-1">
-                  <p className="footerText" id="copyright">2022 © Izabela Kowalska</p>
+                  <p className="text-footer" id="copyright">2022 © Izabela Kowalska</p>
                   <div className="d-flex align-items-center">
-                      <GrMail className="contactIcon" />
+                      <GrMail className="footer-icon" />
                       <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactDataFooter}/>
                   </div>
               </div>

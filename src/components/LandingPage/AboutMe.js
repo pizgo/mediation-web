@@ -62,9 +62,9 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="landingAboutMe ">
+    <section className="landing-aboutMe">
       <div className="container p-4 py-xxl-5">
-        <div className="row sectionRow mb-0 landing-aboutMe-row">
+        <div className="row row-position mb-0">
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">

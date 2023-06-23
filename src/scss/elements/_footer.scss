@@ -1,4 +1,4 @@
-.contactIcon {
+.footer-icon {
   display: inline;
   color: white;
   height: 0.875rem;
@@ -7,16 +7,5 @@
   @include media-breakpoint-up(xl) {
     height: 2rem;
     margin-right: 0.6rem;
-  }
-}
-
-.footerText {
-  font-size: 0.875rem;
-  color: white;
-  display: inline;
-  margin: 0;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1rem;
   }
 }
