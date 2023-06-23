@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import IntroductionText from "../components/IntroductionText";
 import AboutMeMainText from "../components/AboutMe/AboutMeMainText";
+import {introTextAboutMePage, titleAboutMePage} from "../utils/consts";
 
 const AboutMePage = () => {
 
@@ -10,7 +11,7 @@ const AboutMePage = () => {
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}>
       <section className="aboutMe-section mt-5">
-        <IntroductionText fetchName='"Wstep na stronie o mnie"' title="O mnie"/>
+        <IntroductionText fetchTitle={introTextAboutMePage} header={titleAboutMePage}/>
         <AboutMeMainText/>
       </section>
     </motion.div>

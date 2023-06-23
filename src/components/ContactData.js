@@ -6,7 +6,7 @@ const ContactData = (props) => {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == "contact" && title == ${props.fetchName}]{body}`)
+            .fetch(`*[_type == "contact" && title == ${props.fetchTitle}]{body}`)
             .then((data) => {
                 setContactText(data);
             })

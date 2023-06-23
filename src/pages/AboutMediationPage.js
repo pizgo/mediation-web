@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import IntroductionText from "../components/IntroductionText";
 import Faq from "../components/AboutMediation/Faq";
+import {introTextAboutMediationPage, titleAboutMediationPage} from "../utils/consts";
 
 const AboutMediationPage = () => {
 
@@ -10,7 +11,7 @@ const AboutMediationPage = () => {
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}>
       <section className="aboutMediation-section mt-5">
-        <IntroductionText fetchName='"Wstep na stronie o mediacji"' title="Dlaczego warto zaufać mediacji?"/>
+        <IntroductionText fetchTitle={introTextAboutMediationPage} header={titleAboutMediationPage}/>
         <Faq/>
       </section>
     </motion.div>

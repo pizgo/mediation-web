@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import sanityClient from "../../client.js";
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import {aboutMeLandingPage, aboutMeLandingPageImg} from "../../utils/consts";
 
 const AboutMe = () => {
   const [landingAboutText, setLandingAboutText] = useState(null);
@@ -10,7 +11,7 @@ const AboutMe = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "plainText" && title == "O mnie na stronie glownej"]{body}`)
+        `*[_type == "plainText" && title == ${aboutMeLandingPage}]{body}`)
       .then((data) => {
         setLandingAboutText(data);
       })
@@ -20,7 +21,7 @@ const AboutMe = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "picture" && title == "AboutMeLandingPage"]{picture{asset->{
+        `*[_type == "picture" && title == ${aboutMeLandingPageImg}]{picture{asset->{
                 _id,
                 url
                 }},

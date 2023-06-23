@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import Button from "../Button";
 import sanityClient from "../../client";
+import {aboutMePageImg, mainTextAboutMePage} from "../../utils/consts";
 
 const AboutMeMainText = () => {
     const [aboutMeMainText, setAboutMeMainText] = useState(null);
@@ -10,7 +11,7 @@ const AboutMeMainText = () => {
     useEffect(() => {
         sanityClient
             .fetch(
-                `*[_type == "plainText" && title == "O mnie glowne"]{body}`)
+                `*[_type == "plainText" && title == ${mainTextAboutMePage}]{body}`)
             .then((data) => {
                 setAboutMeMainText(data);
             })
@@ -20,7 +21,7 @@ const AboutMeMainText = () => {
     useEffect(() => {
         sanityClient
             .fetch(
-                `*[_type == "picture" && title == "AboutMeImg"]{
+                `*[_type == "picture" && title == ${aboutMePageImg}]{
                 picture{
                     asset->{
                     _id,

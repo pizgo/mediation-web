@@ -3,6 +3,7 @@ import IntroductionText from "../components/IntroductionText";
 import Offer from "../components/LandingPage/Offer";
 import AboutMe from "../components/LandingPage/AboutMe";
 import { motion } from "framer-motion";
+import {introTextLandingPage} from "../utils/consts";
 
 const LandingPage = () => {
   return (
@@ -13,7 +14,7 @@ const LandingPage = () => {
         transition={{ ease: "easeOut", duration: 1 }}>
               <Hero />
               <main>
-                  <IntroductionText fetchName='"Wstep na stronie glownej"'/>
+                  <IntroductionText fetchTitle={introTextLandingPage}/>
                   <Offer />
                   <AboutMe />
               </main>

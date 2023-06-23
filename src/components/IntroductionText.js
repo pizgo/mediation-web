@@ -6,20 +6,20 @@ const IntroductionText = (props) => {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == "plainText" && title == ${props.fetchName}]{body}`)
+            .fetch(`*[_type == "plainText" && title == ${props.fetchTitle}]{body}`)
             .then((data) => {
                 setText(data);
             })
             .catch(console.error);
     }, []);
 
-    const styleIntro = !props.title ?  "d-none" : "header introHeader"
+    const styleIntro = !props.header ?  "d-none" : "header introHeader"
 
     return (
         <section className="intro">
             <div className="container">
                 <div className="row introRow">
-                    <h3 className={styleIntro}>{props.title}</h3>
+                    <h3 className={styleIntro}>{props.header}</h3>
                     {text &&
                         text.map((el, index) => (
                             <p className="introText py-4" key={index}>
