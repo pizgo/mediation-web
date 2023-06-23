@@ -43,7 +43,7 @@ const Offer = () => {
                       <p className="card-title text-center fw-bold pt-4 pt-lg-5">
                         {text.title}
                       </p>
-                      <p className="card-body basic-text">{text.body}</p>
+                      <p className="card-body basicText">{text.body}</p>
                     </span>
                       </div>
                     </Link>
@@ -57,7 +57,7 @@ const Offer = () => {
     <section className="landingPage-offer">
       <div className="container p-4 py-xxl-5">
         <div className="col">
-          <div className="row section-row text-center">
+          <div className="row sectionRow text-center">
             <h3 className="header">Jak mogę ci pomóc?</h3>
           </div>
           <OfferCard/>

@@ -38,7 +38,7 @@ const AboutMeMainText = () => {
 
     return (
         <div className="container p-4 py-xxl-5">
-            <div className="row section-row mb-0">
+            <div className="row sectionRow mb-0">
                 <div
                     className="col-lg-6"
                     data-aos="fade-right"
@@ -59,7 +59,7 @@ const AboutMeMainText = () => {
                     data-aos-duration="500">
                     {aboutMeMainText &&
                         aboutMeMainText.map((aboutTextMain, index) => (
-                            <p className="basic-text" key={index}>{aboutTextMain.body}</p>
+                            <p className="basicText" key={index}>{aboutTextMain.body}</p>
                         ))}
                     <Link className="offer-link link-dark" to="/oferta">
                         <Button title="Poznaj moją ofertę"/>

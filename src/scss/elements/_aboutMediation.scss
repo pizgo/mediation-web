@@ -28,13 +28,4 @@
   }
 }
 
-.accordion-body {
-  font-size: 0.875rem;
-  text-align: justify;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1rem;
-  }
-
-}
 

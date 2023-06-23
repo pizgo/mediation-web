@@ -31,20 +31,26 @@
         transition: 0.5s all ease-in-out;
       }
       &:hover {
-       color: $lightgold;
+       color: $secondary;
       }
       &:hover:before {
         @include media-breakpoint-up(lg) {
           left: 0;
           right: 0;
-          border-bottom: 0.1rem solid $lightgold;
+          border-bottom: 0.1rem solid $secondary;
         }
       }
     }
   }
 }
 
+.nav-link {
+  font-size: 0.875rem;
 
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+}
 
 .navbar-toggler {
   border: none;

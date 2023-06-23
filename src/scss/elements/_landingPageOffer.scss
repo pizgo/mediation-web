@@ -17,7 +17,7 @@
 }
 
 .img-background {
-  background-color: $lightgold;
+  background-color: $secondary;
   border-radius: 50%;
   height: 70px;
   width: 70px;
@@ -37,6 +37,6 @@
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.12), 0 10px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: $shadowHover;
   }
 }

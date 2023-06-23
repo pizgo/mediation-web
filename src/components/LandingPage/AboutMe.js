@@ -37,7 +37,7 @@ const AboutMe = () => {
         <>
           {landingAboutMeText &&
               landingAboutMeText.map((aboutText, index) => (
-                  <p className="basic-text my-4 my-md-5"
+                  <p className="basicText my-4 my-md-5"
                      key={index}>
                     {aboutText.body}
                   </p>
@@ -64,7 +64,7 @@ const AboutMe = () => {
   return (
     <section className="landing-aboutMe">
       <div className="container p-4 py-xxl-5">
-        <div className="row section-row mb-0 landing-aboutMe-row">
+        <div className="row sectionRow mb-0 landing-aboutMe-row">
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">

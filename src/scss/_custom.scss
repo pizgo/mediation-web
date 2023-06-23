@@ -1,18 +1,12 @@
-//THEME COLORS:
 $gold: #d7ae1f;
 $blue: #316785;
-$lightgold: #D7AE1F;
 $lightgrey: #f8f9fa;
 
 $primary: $blue;
-$secondary: $lightgold;
+$secondary: $gold;
 
-//SHADOW
 $shadow: 0 10px 12px rgba(0, 0, 0, 0.08), 0 0 10px rgba(0, 0, 0, 0.05);
-$shadowTransition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-  0.3s box-shadow,
-  0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-$shadowAction: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+$shadowHover: 0 20px 20px rgba(0, 0, 0, 0.12), 0 10px 15px rgba(0, 0, 0, 0.06);
 
 $thumbnail-padding: 0.5rem;
 $thumbnail-border-radius: 0;

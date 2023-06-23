@@ -1,60 +1,14 @@
-.nav-link {
-  font-size: 0.875rem;
+.introHeader {
+  text-align: center;
+  color: white;
+  margin: 0 !important;
+  padding-top: 1rem;
 
-  @include media-breakpoint-up(md) {
-    font-size: 1rem;
-  }
-}
-
-//HERO
-.hero-name {
-  font-weight: 400;
-  line-height: 1.2;
-  color: $primary;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1.6rem;
-  }
-  @include media-breakpoint-up(md) {
-    font-size: 1.8rem;
-  }
   @include media-breakpoint-up(lg) {
-    font-size: 2rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.5rem;
-  }
-  @include media-breakpoint-up(xxl) {
-    font-size: 2.7rem;
-  }
-}
-.hero-desc {
-  padding-bottom: 0.1rem;
-  margin: 0;
-
-  &:last-of-type {
-    padding-bottom: 1rem;
-  }
-  @include media-breakpoint-up(sm) {
-    font-size: 1.2rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.4rem;
-    padding-bottom: 0.7rem;
-  }
-  @include media-breakpoint-up(lg) {
-    font-size: 1.6rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2rem;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 2.2rem;
+    padding-top: 2rem;
   }
 }
 
-//INTRO TEXT
 .introText {
   color: white;
   margin-bottom: 0;
@@ -81,25 +35,11 @@
   }
 }
 
-.introHeader {
-  text-align: center;
-  color: white;
-  margin: 0 !important;
-  padding-top: 1rem;
-
-  @include media-breakpoint-up(lg) {
-    padding-top: 2rem;
-  }
-}
-
-//HEADER
-
 .header {
   font-weight: bold;
 }
 
-//BASIC TEXT
-.basic-text {
+.basicText {
   text-align: justify;
   font-size: 0.875rem;
 
@@ -108,19 +48,7 @@
   }
 }
 
-//FORM:
-
-.form-check-label {
-  font-size: 0.7rem;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 0.8rem;
-  }
-}
-
-//CONTACT & FOOTER
-
-.header-small {
+.headerSmall {
   font-weight: bold;
   margin-bottom: 1.5rem;
 
@@ -130,27 +58,5 @@
   }
 }
 
-//fw-bold mb-4 mb-lg-5 text-lg-center
-
-.error-text {
-  color: $red-400;
-  font-size: 0.8rem;
-
-  @include media-breakpoint-up(sm) {
-    font-weight: bold;
-  }
-}
-
-
-.footer-text {
-  font-size: 0.875rem;
-  color: white;
-  display: inline;
-  margin: 0;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1rem;
-  }
-}
 
 

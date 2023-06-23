@@ -5,7 +5,7 @@ import { emailLink, emailToFetch, phoneLink, phoneNumberToFetch } from "../utils
 
 const ContactPage = () => {
 
-    const classForContactData = "basic-text ms-2"
+    const classForContactData = "basicText ms-2"
 
   return (
     <motion.div
@@ -17,20 +17,20 @@ const ContactPage = () => {
             <div className="row text-center py-3">
                 <h3 className="header">Kontakt</h3>
             </div>
-            <div className="row section-row mb-3">
+            <div className="row sectionRow mb-3">
                <div className="col-lg-6">
-                 <h4 className="header-small">Formularz</h4>
+                 <h4 className="headerSmall">Formularz</h4>
                   <ContactForm/>
                </div>
             <div className="col-lg-6 py-4 py-lg-0 ps-lg-5">
-                <h4 className="header-small">Dane kontaktowe:</h4>
-                <h5 className="header-small mb-lg-4 text-lg-start">Izabela Kowalska</h5>
+                <h4 className="headerSmall">Dane kontaktowe:</h4>
+                <h5 className="headerSmall mb-lg-4 text-lg-start">Izabela Kowalska</h5>
                 <div className="contactType d-flex mb-lg-3">
-                    <p className="basic-text fw-bold">Telefon: </p>
+                    <p className="basicText fw-bold">Telefon: </p>
                     <ContactData fetchTitle={phoneNumberToFetch} link={phoneLink} class={classForContactData}/>
                </div>
                <div className="contactType d-flex">
-                    <p className="basic-text fw-bold">Adres email: </p>
+                    <p className="basicText fw-bold">Adres email: </p>
                     <ContactData fetchTitle={emailToFetch} link={emailLink} class={classForContactData}/>
                </div>
             </div>

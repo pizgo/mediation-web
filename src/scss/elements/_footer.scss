@@ -13,3 +13,14 @@
     margin-right: 0.6rem;
   }
 }
+
+.footer-text {
+  font-size: 0.875rem;
+  color: white;
+  display: inline;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+}

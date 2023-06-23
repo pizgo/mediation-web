@@ -31,3 +31,20 @@ input[type="checkbox"]:checked {
   background: rgba($secondary, 0.45);
   border: none;
 }
+
+.form-check-label {
+  font-size: 0.7rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 0.8rem;
+  }
+}
+
+.error-text {
+  color: $red-400;
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(sm) {
+    font-weight: bold;
+  }
+}
