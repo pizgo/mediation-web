@@ -10,7 +10,7 @@ const AboutMePage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}>
-      <section className="aboutMe-section mt-5">
+      <section className="section-container" id="about-me">
         <IntroductionText fetchTitle={introTextAboutMePage} header={titleAboutMePage}/>
         <AboutMeMainText/>
       </section>

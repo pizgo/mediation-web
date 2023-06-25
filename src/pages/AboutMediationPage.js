@@ -10,7 +10,7 @@ const AboutMediationPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}>
-      <section className="aboutMediation-section mt-5">
+      <section className="section-container" id="about-mediation">
         <IntroductionText fetchTitle={introTextAboutMediationPage} header={titleAboutMediationPage}/>
         <Faq/>
       </section>

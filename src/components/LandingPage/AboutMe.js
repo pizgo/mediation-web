@@ -62,14 +62,14 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="landing-aboutMe">
+    <section id="landing-about-me">
       <div className="container p-4 py-xxl-5">
         <div className="row row-position mb-0">
           <div className="col-md-6"
             data-aos="fade-right"
             data-aos-duration="500">
             <h3 className="text-center text-md-start">O mnie</h3>
-            <div className="landing-aboutMe-textContainer">
+            <div>
               <AboutMeText/>
               <Link className="offer-link link-dark" to="/omnie">
                 <Button title="Dowiedz się więcej"/>

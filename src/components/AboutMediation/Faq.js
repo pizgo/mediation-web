@@ -14,7 +14,7 @@ const Faq = () => {
     }, []);
 
     return (
-        <div className="container p-4 py-xxl-5">
+        <div className="container main-content">
             <div className="accordion accordion-flush" id="accordionMediation">
                 {FAQ &&
                     FAQ.map((text, index) => (

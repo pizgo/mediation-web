@@ -34,17 +34,17 @@ const Offer = () => {
                           className="card offer-card px-3 pt-4 mb-4 mb-md-4 position-relative"
                           data-aos="fade-up"
                           data-aos-duration="500">
-                    <span key={index}>
-                      <div className="offer-imgBackground position-absolute top-0 start-50 translate-middle "></div>
-                      <img className="offer-img img-fluid
-                           position-absolute top-0 start-50 translate-middle"
-                           src={text.mainImage.asset.url}
-                           alt={text.mainImage.alt}/>
-                      <p className="card-title text-center fw-bold pt-4 pt-lg-5">
-                        {text.title}
-                      </p>
-                      <p className="card-body text-basic">{text.body}</p>
-                    </span>
+                        <span key={index}>
+                            <div className="offer-imgBackground position-absolute top-0 start-50 translate-middle "></div>
+                            <img className="offer-img img-fluid
+                                 position-absolute top-0 start-50 translate-middle"
+                                 src={text.mainImage.asset.url}
+                                 alt={text.mainImage.alt}/>
+                            <h5 className="card-title text-center pt-4 pt-lg-5">
+                              {text.title}
+                            </h5>
+                            <p className="card-body text-basic">{text.body}</p>
+                        </span>
                       </div>
                     </Link>
                   </div>

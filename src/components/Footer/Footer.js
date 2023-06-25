@@ -46,7 +46,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="footer bg-primary">
+    <section className="bg-primary" id="footer">
       <div className="container">
           <FooterForMobile/>
           <FooterForBiggerScreens/>

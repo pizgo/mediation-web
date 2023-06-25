@@ -21,3 +21,15 @@
   }
 }
 
+.section-container {
+  margin-top: 3rem;
+}
+
+.main-content {
+  padding: 1.5rem;
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
