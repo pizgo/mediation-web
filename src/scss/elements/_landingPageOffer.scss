@@ -27,12 +27,12 @@
   &-imgBackground  {
     background-color: $secondary;
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 4.4rem;
+    width: 4.4rem;
 
     @include media-breakpoint-up(xxl) {
-      height: 92px;
-      width: 92px;
+      height: 5.75rem;
+      width: 5.75rem;
     }
   }
 }

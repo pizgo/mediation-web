@@ -1,6 +1,11 @@
 .logo {
-  width: 80px;
+  width: 4rem;
   cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    width: 5rem;
+  }
+
 }
 
 .menu {
@@ -47,8 +52,8 @@
 .navbar-toggler {
   border: none;
   color: transparent;
-  width: 20px;
-  height: 10px;
+  width: 1.5rem;
+  height: 0.5rem;
   position: relative;
   transition: 0.5s ease-in-out;
 
@@ -81,13 +86,13 @@
 }
 
 .middle-bar {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 //when navigation clicked
 
 .navbar-toggler .top-bar {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(135deg);
 }
 
@@ -96,14 +101,14 @@
 }
 
 .navbar-toggler .bottom-bar {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(-135deg);
 }
 
 //when navigation is collapsed
 
 .navbar-toggler.collapsed .top-bar {
-  margin-top: -20px;
+  margin-top: -1.2rem;
   transform: rotate(0deg);
 }
 
@@ -112,7 +117,7 @@
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  margin-top: 20px;
+  margin-top: 1.2rem;
   transform: rotate(0deg);
 }
 

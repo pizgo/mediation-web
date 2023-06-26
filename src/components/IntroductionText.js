@@ -18,7 +18,7 @@ const IntroductionText = (props) => {
     return (
         <section className="intro bg-primary w-100">
             <div className="container">
-                <div className="row introRow">
+                <div className="row">
                     <h3 className={styleIntro}>{props.header}</h3>
                     {text &&
                         text.map((el, index) => (
