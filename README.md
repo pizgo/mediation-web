@@ -10,7 +10,8 @@ https://pizgo.github.io/mediation-web</br>
 
 #### Current features:
 
-- providing users with infofrmation about the client's business
+1. providing infofrmation about the client's business 
+2. presenting basic design idea
 
 #### What is still in progress:
 
